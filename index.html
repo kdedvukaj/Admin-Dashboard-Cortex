@@ -1,0 +1,141 @@
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cortex Library | Admin Dashboard</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Sidebar Starts Here-->
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="./img/logo.png" alt="" />
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">Cortex</span>
+            <span class="profession">Library</span>
+          </div>
+        </div>
+        <i class="bx bx-right-arrow-alt toggle-ch"></i>
+      </header>
+
+      <!-- Sidebar Menu Starts Here -->
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Bibliotekari</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-id-card icon"></i>
+                <span class="text nav-text">Ucenici</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-book-alt icon"></i>
+                <span class="text nav-text">Knjige</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-briefcase-alt-2 icon"></i>
+                <span class="text nav-text">Autori</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-repost icon"></i>
+                <span class="text nav-text">Izdavanje Knjiga</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <ul>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-wrench icon"></i>
+                <span class="text nav-text">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Head Navigation Starts Here-->
+    <div class="nav-head">
+      <div class="menu-toggle toggle">
+        <i class="bx bx-menu icon"></i>
+      </div>
+      <div class="right-side">
+        <div class="dropdown">
+          <div class="create">
+            <button>
+              <i class="bx bx-add-to-queue icon dropdown-btn"></i>
+            </button>
+
+            <ul>
+              <li class="drop-link"><a href="#">+ Bibliotekar</a></li>
+              <li class="drop-link"><a href="#">+ Ucenik</a></li>
+              <li class="drop-link"><a href="#">+ Knjiga</a></li>
+              <li class="drop-link"><a href="#">+ Autor</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="profile">
+          <div class="profile-img">
+            <img class="img-btn" src="./img/profile.jpg" alt="" />
+          </div>
+          <ul class="profile-links">
+            <li class="drop-link">
+              <a href="#"><i class="bx bx-user icon"></i> Profile</a>
+            </li>
+            <li class="drop-link">
+              <a href="#"><i class="bx bx-log-out-circle icon"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Main Section Starts Here-->
+    <section class="home">
+      <h1>Dashboard</h1>
+    </section>
+  </body>
+</html>
