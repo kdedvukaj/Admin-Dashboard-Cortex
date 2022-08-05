@@ -371,9 +371,14 @@ ul {
   left: 0;
   height: calc(100% - 7.2rem);
   width: 100%;
+  padding: 2rem;
   background-color: var(--body-clr);
   transition: var(--tran-05);
-  text-align: center;
+}
+
+.heading h1 {
+  font-size: 1.8rem;
+  color: var(--sidebar-clr);
 }
 
 /* ====== Media Queries for Ipad and Up ====== */
@@ -410,5 +415,9 @@ ul {
   .sidebar.close ~ .nav-head {
     left: 8.8rem;
     width: calc(100% - 8.8rem);
+  }
+
+  .heading h1 {
+    font-size: 2.2rem;
   }
 }
