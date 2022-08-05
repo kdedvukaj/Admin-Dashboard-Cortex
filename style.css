@@ -11,6 +11,7 @@
   --body-clr: #e4e9f7;
   --sidebar-clr: #343a40;
   --primary-clr: #695cfe;
+  --primary-clr-hover: #4a3bf0;
   --white-clr: #fff;
   --text-clr: #c2c7d0;
 
@@ -73,6 +74,17 @@ ul {
   min-height: 100vh;
   margin: 0 auto;
   position: relative;
+}
+
+.btn-primary {
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--primary-clr-hover);
 }
 
 /* ===== Sidebar ===== */
@@ -376,9 +388,61 @@ ul {
   transition: var(--tran-05);
 }
 
+.heading {
+  margin-bottom: 3rem;
+}
+
 .heading h1 {
   font-size: 1.8rem;
   color: var(--sidebar-clr);
+}
+
+/* ====== Table Style ====== */
+
+.table {
+  max-width: 160rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.table-section {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  background: var(--white-clr);
+  width: 100%;
+}
+
+table i {
+  cursor: pointer;
+}
+
+th {
+  padding: 1rem 2em;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+thead th {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /* ====== Media Queries for Ipad and Up ====== */
@@ -419,5 +483,9 @@ ul {
 
   .heading h1 {
     font-size: 2.2rem;
+  }
+
+  .btn-primary {
+    font-size: 1.7rem;
   }
 }
