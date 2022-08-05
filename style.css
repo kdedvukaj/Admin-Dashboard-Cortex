@@ -445,6 +445,15 @@ thead th {
   font-weight: 700;
 }
 
+input[type="checkbox"] {
+  -ms-transform: scale(1.1); /* IE */
+  -moz-transform: scale(1.1); /* FF */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  transform: scale(1.1);
+  padding: 0.8rem;
+}
+
 /* ====== Media Queries for Ipad and Up ====== */
 
 @media screen and (min-width: 768px) {
