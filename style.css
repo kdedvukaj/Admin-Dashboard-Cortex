@@ -416,11 +416,6 @@ table {
   width: 100%;
 }
 
-/* table.authors {
-  min-width: 138rem;
-  width: 100%;
-} */
-
 .table-header {
   display: flex;
   align-items: center;
@@ -433,22 +428,29 @@ thead th {
   font-weight: 700;
 }
 
-th {
+th,
+td {
   padding: 1rem 2em;
   letter-spacing: 0.1rem;
   font-size: 1.3rem;
   font-weight: 500;
   text-align: left;
   border-bottom: 1px solid #dee2e6;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
 }
 
-th img {
+th img,
+td img {
   width: 3rem;
   height: 3rem;
   margin-right: 1rem;
 }
 
-th.img-name img {
+td.img-name img {
   border-radius: 50%;
 }
 .img-name,
@@ -463,10 +465,10 @@ table i {
   padding-left: 2rem;
 }
 
-th.edit i {
+td.edit i {
   color: var(--primary-clr);
 }
-th.delete i {
+td.delete i {
   color: var(--red-clr);
 }
 
