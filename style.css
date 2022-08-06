@@ -416,6 +416,11 @@ table {
   width: 100%;
 }
 
+/* table.authors {
+  min-width: 138rem;
+  width: 100%;
+} */
+
 .table-header {
   display: flex;
   align-items: center;
@@ -435,6 +440,21 @@ th {
   font-weight: 500;
   text-align: left;
   border-bottom: 1px solid #dee2e6;
+}
+
+th img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+th.img-name img {
+  border-radius: 50%;
+}
+.img-name,
+.img-name-auth {
+  display: flex;
+  align-items: center;
 }
 
 table i {
