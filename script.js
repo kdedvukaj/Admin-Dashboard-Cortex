@@ -58,3 +58,7 @@ window.addEventListener("click", (e) => {
 //     profile.classList.remove("open");
 //   }
 // });
+
+tinymce.init({
+  selector: "textarea#default",
+});
