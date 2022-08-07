@@ -110,8 +110,12 @@
               </button>
 
               <ul>
-                <li class="drop-link"><a href="#">+ Bibliotekar</a></li>
-                <li class="drop-link"><a href="#">+ Ucenik</a></li>
+                <li class="drop-link">
+                  <a href="./add-librarian.html">+ Bibliotekar</a>
+                </li>
+                <li class="drop-link">
+                  <a href="./add-student.html">+ Ucenik</a>
+                </li>
                 <li class="drop-link"><a href="#">+ Knjiga</a></li>
                 <li class="drop-link"><a href="#">+ Autor</a></li>
               </ul>
@@ -137,6 +141,132 @@
       <section class="home">
         <div class="heading">
           <h1>Knjige</h1>
+        </div>
+        <div class="table">
+          <div class="table-header">
+            <a class="btn-primary" href="#">Nova knjiga</a>
+            <div class="search">
+              <input type="text" placeholder="Search" />
+              <i class="bx bx-search icon"></i>
+            </div>
+          </div>
+          <div class="table-section">
+            <table>
+              <thead>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <th>Naziv knjige</th>
+                  <th>Autor</th>
+                  <th>Kategorija</th>
+                  <th>Na raspolaganju</th>
+                  <th>Rezervisano</th>
+                  <th>Izdato</th>
+                  <th>U prekoracenju</th>
+                  <th>Kolicina</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="img-name-auth">
+                    <img class="book" src="./img/book.png" />
+                    <span>Tom Sojer</span>
+                  </td>
+                  <td>Mark Twain</td>
+                  <td class="align-center">Romani</td>
+                  <td class="align-center">5</td>
+                  <td class="align-center"><a href="#">1</a></td>
+                  <td class="align-center"><a href="#">5</a></td>
+                  <td class="align-center"><a href="#">3</a></td>
+                  <td class="align-center">13</td>
+                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="img-name-auth">
+                    <img class="book" src="./img/book.png" />
+                    <span>Robinson Kruso</span>
+                  </td>
+                  <td>Daniel Defoe</td>
+                  <td class="align-center">Romani</td>
+                  <td class="align-center">5</td>
+                  <td class="align-center"><a href="#">2</a></td>
+                  <td class="align-center"><a href="#">9</a></td>
+                  <td class="align-center"><a href="#">4</a></td>
+                  <td class="align-center">13</td>
+                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="img-name-auth">
+                    <img class="book" src="./img/book.png" />
+                    <span>Robin Sarma</span>
+                  </td>
+                  <td>Budni u 5</td>
+                  <td class="align-center">Romani</td>
+                  <td class="align-center">5</td>
+                  <td class="align-center"><a href="#">4</a></td>
+                  <td class="align-center"><a href="#">5</a></td>
+                  <td class="align-center"><a href="#">6</a></td>
+                  <td class="align-center">13</td>
+                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="img-name-auth">
+                    <img class="book" src="./img/book.png" />
+                    <span>Tom Sojer</span>
+                  </td>
+                  <td>Mark Twain</td>
+                  <td class="align-center">Romani</td>
+                  <td class="align-center">5</td>
+                  <td class="align-center"><a href="#">11</a></td>
+                  <td class="align-center"><a href="#">29</a></td>
+                  <td class="align-center"><a href="#">6</a></td>
+                  <td class="align-center">13</td>
+                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="img-name-auth">
+                    <img class="book" src="./img/book.png" />
+                    <span>Robin Sarma</span>
+                  </td>
+                  <td>Budni u 5</td>
+                  <td class="align-center">Romani</td>
+                  <td class="align-center">5</td>
+                  <td class="align-center"><a href="#">10</a></td>
+                  <td class="align-center"><a href="#">9</a></td>
+                  <td class="align-center"><a href="#">6</a></td>
+                  <td class="align-center">13</td>
+                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="img-name-auth">
+                    <img class="book" src="./img/book.png" />
+                    <span>Tom Sojer</span>
+                  </td>
+                  <td>Mark Twain</td>
+                  <td class="align-center">Romani</td>
+                  <td class="align-center">3</td>
+                  <td class="align-center"><a href="#">2</a></td>
+                  <td class="align-center"><a href="#">23</a></td>
+                  <td class="align-center"><a href="#">3</a></td>
+                  <td class="align-center">10</td>
+                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-pagination">
+            <div class="chevs-left"><i class="bx bx-chevrons-left"></i></div>
+            <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+            <p>1 of 1</p>
+            <div class="chev-right"><i class="bx bx-chevron-right"></i></div>
+            <div class="chevs-right"><i class="bx bx-chevrons-right"></i></div>
+          </div>
         </div>
       </section>
     </div>

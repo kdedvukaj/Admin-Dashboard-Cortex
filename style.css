@@ -398,6 +398,14 @@ ul {
   color: var(--sidebar-clr);
 }
 
+.heading p {
+  font-size: 1.3rem;
+}
+
+.heading a {
+  color: var(--primary-clr);
+}
+
 /* ====== Table Style ====== */
 
 .table {
@@ -443,6 +451,10 @@ td {
   -webkit-text-size-adjust: none;
 }
 
+td a {
+  color: var(--primary-clr);
+}
+
 th img,
 td img {
   width: 3rem;
@@ -457,6 +469,11 @@ td.img-name img {
 .img-name-auth {
   display: flex;
   align-items: center;
+}
+
+td .book {
+  width: 2.5rem;
+  height: 3rem;
 }
 
 table i {
@@ -541,6 +558,94 @@ input[type="checkbox"] {
   color: var(--primary-clr);
 }
 
+.align-center {
+  text-align: center;
+}
+
+/* ====== Forms ====== */
+
+.table .column {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  color: var(--sidebar-clr);
+  font-size: 1.3rem;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  font-weight: 400;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  border: 1.2px solid #c4cae0;
+  margin-top: 0.5rem;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: var(--primary-clr);
+}
+.form-btn button {
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+button.form-btn-primary {
+  background: var(--primary-clr);
+  color: var(--white-clr);
+}
+
+button.form-btn-secondary {
+  background: var(--white-clr);
+  color: var(--sidebar-clr);
+  border: 1px solid var(--text-clr);
+}
+
+button:last-child {
+  margin-right: 0;
+}
+.form-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.img-column {
+  display: inline-block;
+  padding: 7rem;
+  border: 1px solid var(--text-clr);
+  text-align: center;
+}
+
+.img-column > input {
+  display: none;
+}
+
+.img-column i {
+  font-size: 10rem;
+  cursor: pointer;
+}
+
+.form-btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 /* ====== Media Queries for Ipad and Up ====== */
 
 @media screen and (min-width: 768px) {
@@ -601,5 +706,26 @@ input[type="checkbox"] {
     height: 4.8rem;
     width: 4.8rem;
     line-height: 4.8rem;
+  }
+
+  .form-main {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .form-main > * {
+    flex: 1;
+  }
+
+  .form-btn {
+    text-align: left;
+  }
+
+  button {
+    font-size: 1.7rem;
+  }
+
+  .form-right {
+    margin-top: 0;
   }
 }
