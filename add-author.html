@@ -15,11 +15,7 @@
       rel="stylesheet"
     />
 
-    <script
-      src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js"
-      referrerpolicy="origin"
-    ></script>
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
     <!-- Javascript -->
     <script src="script.js" defer></script>
   </head>
@@ -121,7 +117,9 @@
                 <li class="drop-link">
                   <a href="./add-student.html">+ Ucenik</a>
                 </li>
-                <li class="drop-link"><a href="#">+ Knjiga</a></li>
+                <li class="drop-link">
+                  <a href="./add-books.html">+ Knjiga</a>
+                </li>
                 <li class="drop-link">
                   <a href="./add-author.html">+ Autor</a>
                 </li>
@@ -160,7 +158,7 @@
                 </div>
                 <div class="column">
                   <label for="type">Opis</label>
-                  <textarea id="default"></textarea>
+                  <textarea name="content" id="editor"></textarea>
                 </div>
               </div>
               <div class="form-right"></div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cortex Library | Novi bibliotekar</title>
+    <title>Cortex Library | Nova knjiga</title>
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
 
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
     <!-- Javascript -->
     <script src="script.js" defer></script>
   </head>
@@ -144,53 +145,111 @@
       <!-- Main Section Starts Here-->
       <section class="home">
         <div class="heading">
-          <h1>Novi bibliotekar</h1>
-          <p>
-            <a href="./librarians.html">Svi bibliotekari</a> / Novi bibliotekar
-          </p>
+          <h1>Nova knjiga</h1>
+          <p><a href="./books.html">Evidencija knjiga</a> / Nova knjiga</p>
         </div>
         <div class="table">
+          <div class="tabs">
+            <button
+              class="tablinks active"
+              onclick="openCity(event, 'details')"
+              id="defaultOpen"
+            >
+              Osnovni Detalji
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'specificity')">
+              Specifikacija
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'media')">
+              Multimedija
+            </button>
+          </div>
           <form>
-            <div class="form-main">
+            <div id="details" class="form-main">
               <div class="form-left">
                 <div class="column">
-                  <label for="name">Ime i prezime</label>
+                  <label for="name">Naziv knjige</label>
                   <input type="text" id="name" />
                 </div>
                 <div class="column">
-                  <label for="type">Tip korisnika</label>
-                  <select name="type" id="type" disabled>
-                    <option value="bibliotekar">Bibliotekar</option>
+                  <label for="type">Kratki sadrzaj</label>
+                  <textarea name="content" id="editor"></textarea>
+                </div>
+                <div class="column">
+                  <label for="category">Izaberite kategorije</label>
+                  <select name="category" id="category">
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="">
+                <div class="column">
+                  <label for="genre">Izaberite zanrove</label>
+                  <select name="genre" id="genre">
+                    <option value=""></option>
                   </select>
                 </div>
                 <div class="column">
-                  <label for="jmbg">JMBG</label>
-                  <input type="text" id="jmbg" />
+                  <label for="authors">Izaberite autora</label>
+                  <select name="authors" id="authors">
+                    <option value=""></option>
+                  </select>
                 </div>
                 <div class="column">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" />
+                  <label for="publisher">Izdavac</label>
+                  <select name="publisher" id="publisher">
+                    <option value=""></option>
+                  </select>
                 </div>
                 <div class="column">
-                  <label for="username">Korisnicko ime</label>
-                  <input type="text" id="username" />
+                  <label for="year">Godina izdavanja</label>
+                  <input type="text" id="year" />
                 </div>
                 <div class="column">
-                  <label for="password">Sifra</label>
-                  <input type="password" id="password" />
-                </div>
-                <div class="column">
-                  <label for="confirm-password">Ponovi sifru</label>
-                  <input type="password" id="confirm-password" />
+                  <label for="quantity">Kolicina</label>
+                  <input type="text" id="quantity" />
                 </div>
               </div>
+            </div>
+            <div id="specificity" class="form-main">
+              <div class="form-left">
+                <div class="column">
+                  <label for="pageNr">Broj strana</label>
+                  <input type="text" id="pageNr" />
+                </div>
+                <div class="column">
+                  <label for="letter">Pismo</label>
+                  <select name="letter" id="letter">
+                    <option value=""></option>
+                  </select>
+                </div>
+                <div class="column">
+                  <label for="cover">Povez</label>
+                  <select name="cover" id="cover">
+                    <option value=""></option>
+                  </select>
+                </div>
+                <div class="column">
+                  <label for="size">Format</label>
+                  <select name="size" id="size">
+                    <option value=""></option>
+                  </select>
+                </div>
+                <div class="column">
+                  <label for="isbn">International Standard Book Nr</label>
+                  <input type="text" id="isbn" />
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+            <div id="media" class="form-main">
               <div class="form-right">
-                <div class="img-column">
+                <div class="img-column full-width">
                   <label for="image-upload"
-                    ><i class="bx bx-image-add"></i
+                    ><i class="bx bx-cloud-upload"></i
                   ></label>
                   <input id="image-upload" type="file" />
-                  <p>Add photo</p>
+                  <p>Drop files to attach</p>
                 </div>
               </div>
             </div>
