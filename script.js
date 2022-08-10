@@ -59,6 +59,22 @@ window.addEventListener("click", (e) => {
 //   }
 // });
 
+// MODAL AND OVERLAY PART
+
+// By clicking on resetpsw btn open the modal
+// resetPsw.addEventListener("click", function () {
+//   modal.classList.add("open");
+//   overlay.classList.add("open");
+// });
+
+// closeModalBtn.addEventListener("click", closeModal);
+// overlay.addEventListener("click", closeModal);
+
+// function closeModal() {
+//   modal.classList.remove("open");
+//   overlay.classList.remove("open");
+// }
+
 ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
   console.error(error);
 });
