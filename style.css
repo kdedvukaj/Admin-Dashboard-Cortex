@@ -671,7 +671,8 @@ button:last-child {
   gap: 2rem;
 }
 
-.tabs button {
+.tabs button,
+.scroll-tabs button {
   font-size: 1.8rem;
   font-weight: bold;
   color: var(--sidebar-clr);
@@ -682,7 +683,8 @@ button:last-child {
   cursor: pointer;
 }
 
-.tabs button.active {
+.tabs button.active,
+.scroll-tabs button.active {
   color: var(--primary-clr);
   border-bottom: 1px solid var(--primary-clr);
 }
@@ -733,6 +735,15 @@ button:last-child {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+
+.scroll-tabs {
+  padding: 2rem 0 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 /* ====== Reset Password Overlay ====== */

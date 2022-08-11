@@ -16,6 +16,7 @@
     />
 
     <!-- Javascript -->
+    <script src="tabs.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -147,6 +148,71 @@
       <section class="home">
         <div class="heading">
           <h1>Settings</h1>
+        </div>
+        <div class="table">
+          <div class="scroll-tabs">
+            <button
+              class="tablinks active"
+              onclick="openSettings(event, 'policy')"
+              id="defaultOpen"
+            >
+              Polisa
+            </button>
+            <button class="tablinks" onclick="openSettings(event, 'category')">
+              Kategorije
+            </button>
+            <button class="tablinks" onclick="openSettings(event, 'genre')">
+              Zanrovi
+            </button>
+            <button class="tablinks" onclick="openSettings(event, 'publisher')">
+              Izdavac
+            </button>
+            <button class="tablinks" onclick="openSettings(event, 'cover')">
+              Povez
+            </button>
+            <button class="tablinks" onclick="openSettings(event, 'format')">
+              Format
+            </button>
+            <button class="tablinks" onclick="openSettings(event, 'letter')">
+              Pismo
+            </button>
+          </div>
+
+          <div id="policy" class="form-main">
+            <div class="form-left">
+              <h1>Polisa</h1>
+            </div>
+          </div>
+          <div id="category" class="form-main">
+            <div class="form-left">
+              <h1>Kategorija</h1>
+            </div>
+          </div>
+          <div id="genre" class="form-main">
+            <div class="form-left">
+              <h1>Zanr</h1>
+            </div>
+          </div>
+          <div id="publisher" class="form-main">
+            <div class="form-left">
+              <h1>Izdavac</h1>
+            </div>
+          </div>
+          <div id="cover" class="form-main">
+            <div class="form-left">
+              <h1>Povez</h1>
+            </div>
+          </div>
+          <div id="format" class="form-main">
+            <div class="form-left">
+              <h1>Format</h1>
+            </div>
+          </div>
+          <div id="letter" class="form-main">
+            <div class="form-left">
+              <h1>Pismo</h1>
+            </div>
+          </div>
         </div>
       </section>
     </div>
