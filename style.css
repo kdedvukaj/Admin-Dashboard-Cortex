@@ -489,6 +489,33 @@ td.danger {
   text-align: center;
 }
 
+td.warning {
+  background: #ce8c11;
+  color: var(--white-clr);
+  font-weight: 700;
+  text-align: center;
+}
+
+td.success {
+  background: #30b35c;
+  color: var(--white-clr);
+  font-weight: 700;
+  text-align: center;
+}
+
+td.status i {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+td.status i.bx-check {
+  color: #0b722d;
+}
+
+td.status i.bx-x {
+  color: #ac1c1c;
+}
+
 table i {
   cursor: pointer;
   font-size: 1.8rem;
@@ -526,7 +553,14 @@ input[type="checkbox"] {
   position: relative;
 }
 
-.search input {
+.search-book {
+  background: #fff;
+  width: 100%;
+  position: relative;
+}
+
+.search input,
+.search-book input {
   height: 3.9rem;
   width: 100%;
   outline: none;
@@ -537,7 +571,8 @@ input[type="checkbox"] {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-.search .icon {
+.search .icon,
+.search-book .icon {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -689,6 +724,7 @@ button:last-child {
   color: var(--sidebar-clr);
   margin-right: 3rem;
   padding-bottom: 0.5rem;
+  min-width: max-content;
   border: none;
   background: none;
   cursor: pointer;
@@ -876,14 +912,20 @@ button:last-child {
     width: 30rem;
   }
 
-  .search input {
+  .search-book {
+    width: 40rem;
+  }
+
+  .search input,
+  .search-book input {
     height: 4.6rem;
     padding: 0 8rem 0 1.5rem;
     font-size: 1.7rem;
     color: var(--sidebar-clr);
   }
 
-  .search .icon {
+  .search .icon,
+  .search-book .icon {
     font-size: 2rem;
     height: 4.8rem;
     width: 4.8rem;

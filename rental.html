@@ -175,7 +175,8 @@
           <div id="first" class="form-main">
             <div class="table">
               <div class="table-header">
-                <div class="search">
+                <div class=""></div>
+                <div class="search-book">
                   <input type="text" placeholder="Pretrazi knjige..." />
                   <i class="bx bx-search icon"></i>
                 </div>
@@ -286,23 +287,468 @@
           </div>
 
           <div id="second" class="form-main">
-            <div class="form-left">
-              <h1>Vracene knjige</h1>
+            <div class="table">
+              <div class="table-header">
+                <div class=""></div>
+                <div class="search-book">
+                  <input type="text" placeholder="Pretrazi knjige..." />
+                  <i class="bx bx-search icon"></i>
+                </div>
+              </div>
+              <div class="table-section">
+                <table>
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox" /></th>
+                      <th>Naziv knjige</th>
+                      <th>Izdato uceniku</th>
+                      <th>Datum izdavanja</th>
+                      <th>Datum vracanja</th>
+                      <th>Zadrzavanje</th>
+                      <th>Knjigu izdao</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Geografija CG</span>
+                      </td>
+                      <td>Pero Perovic</td>
+                      <td>21.02.2022</td>
+                      <td>29.02.2022</td>
+                      <td>2 nedelje</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robin Sarma</span>
+                      </td>
+                      <td>Mijo Mijovic</td>
+                      <td>15.05.2020</td>
+                      <td>25.05.2020</td>
+                      <td>5 dana</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Tom Sojer</span>
+                      </td>
+                      <td>Jelena Vukovic</td>
+                      <td>13.01.2021</td>
+                      <td>13.02.2021</td>
+                      <td class="danger">1 mjesec</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robinson Kruso</span>
+                      </td>
+                      <td>Nikolina Nikolic</td>
+                      <td>21.12.2022</td>
+                      <td>23.12.2022</td>
+                      <td>2 dana</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robin Sarma</span>
+                      </td>
+                      <td>Mijo Mijovic</td>
+                      <td>15.05.2020</td>
+                      <td>15.06.2020</td>
+                      <td class="danger">1 mjesec</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Geografija CG</span>
+                      </td>
+                      <td>Pero Perovic</td>
+                      <td>21.02.2022</td>
+                      <td>10.03.2022</td>
+                      <td>2 nedelje</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-pagination">
+                <div class="chevs-left">
+                  <i class="bx bx-chevrons-left"></i>
+                </div>
+                <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+                <p>1 of 1</p>
+                <div class="chev-right">
+                  <i class="bx bx-chevron-right"></i>
+                </div>
+                <div class="chevs-right">
+                  <i class="bx bx-chevrons-right"></i>
+                </div>
+              </div>
             </div>
           </div>
           <div id="third" class="form-main">
-            <div class="form-left">
-              <h1>Knjige u prekoracenju</h1>
+            <div class="table">
+              <div class="table-header">
+                <div class=""></div>
+                <div class="search-book">
+                  <input type="text" placeholder="Pretrazi knjige..." />
+                  <i class="bx bx-search icon"></i>
+                </div>
+              </div>
+              <div class="table-section">
+                <table>
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox" /></th>
+                      <th>Naziv knjige</th>
+                      <th>Datum izdavanja</th>
+                      <th>Izdato uceniku</th>
+                      <th>Prekoracenje</th>
+                      <th>Zadrzavanje</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Antigona</span>
+                      </td>
+                      <td>21.02.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="danger">30 dana</td>
+                      <td>3 mjeseca</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Dundo Maroje</span>
+                      </td>
+                      <td>23.05.2022</td>
+                      <td>Mijo Mijovic</td>
+                      <td class="danger">40 dana</td>
+                      <td>2 mjeseca</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Don Kihot</span>
+                      </td>
+                      <td>12.02.2021</td>
+                      <td>Nikolina Nikolic</td>
+                      <td class="danger">43 dana</td>
+                      <td>1 mjesec</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Evgenije njegin</span>
+                      </td>
+                      <td>2.01.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="danger">38 dana</td>
+                      <td>2 mjeseca</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robin Sarma</span>
+                      </td>
+                      <td>07.02.2022</td>
+                      <td>Mijo Mijovic</td>
+                      <td class="danger">16 dana</td>
+                      <td>2 mjeseca</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Ilijada</span>
+                      </td>
+                      <td>17.11.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="danger">15 dana</td>
+                      <td>1 mjesec</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-pagination">
+                <div class="chevs-left">
+                  <i class="bx bx-chevrons-left"></i>
+                </div>
+                <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+                <p>1 of 1</p>
+                <div class="chev-right">
+                  <i class="bx bx-chevron-right"></i>
+                </div>
+                <div class="chevs-right">
+                  <i class="bx bx-chevrons-right"></i>
+                </div>
+              </div>
             </div>
           </div>
           <div id="fourth" class="form-main">
-            <div class="form-left">
-              <h1>Aktivne rezervacije</h1>
+            <div class="table">
+              <div class="table-header">
+                <div class="search-book">
+                  <input type="text" placeholder="Pretrazi knjige..." />
+                  <i class="bx bx-search icon"></i>
+                </div>
+              </div>
+              <div class="table-section">
+                <table>
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox" /></th>
+                      <th>Naziv knjige</th>
+                      <th>Datum rezervacije</th>
+                      <th>Istice</th>
+                      <th>Podnosilac</th>
+                      <th>status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Antigona</span>
+                      </td>
+                      <td>31.04.2022</td>
+                      <td>10.05.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="status">
+                        <i class="bx bx-check"></i><i class="bx bx-x"></i>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Dundo Maroje</span>
+                      </td>
+                      <td>05.11.2022</td>
+                      <td>25.11.2022</td>
+                      <td>Mijo Mijovic</td>
+                      <td class="status">
+                        <i class="bx bx-check"></i><i class="bx bx-x"></i>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Don Kihot</span>
+                      </td>
+                      <td>21.02.2022</td>
+                      <td>26.02.2022</td>
+                      <td>Nikolina Nikolic</td>
+                      <td class="status">
+                        <i class="bx bx-check"></i><i class="bx bx-x"></i>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Evgenije njegin</span>
+                      </td>
+                      <td>31.02.2022</td>
+                      <td>10.03.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="status">
+                        <i class="bx bx-check"></i><i class="bx bx-x"></i>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robin Sarma</span>
+                      </td>
+                      <td>31.04.2022</td>
+                      <td>10.05.2022</td>
+                      <td>Mijo Mijovic</td>
+                      <td class="warning">Rezervisano</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Ilijada</span>
+                      </td>
+                      <td>10.05.2022</td>
+                      <td>25.06.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="warning">Rezervisano</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-pagination">
+                <div class="chevs-left">
+                  <i class="bx bx-chevrons-left"></i>
+                </div>
+                <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+                <p>1 of 1</p>
+                <div class="chev-right">
+                  <i class="bx bx-chevron-right"></i>
+                </div>
+                <div class="chevs-right">
+                  <i class="bx bx-chevrons-right"></i>
+                </div>
+              </div>
             </div>
           </div>
           <div id="fifth" class="form-main">
-            <div class="form-left">
-              <h1>Arhivirane rezervacije</h1>
+            <div class="table">
+              <div class="table-header">
+                <div class="search-book">
+                  <input type="text" placeholder="Pretrazi knjige..." />
+                  <i class="bx bx-search icon"></i>
+                </div>
+              </div>
+              <div class="table-section">
+                <table>
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox" /></th>
+                      <th>Naziv knjige</th>
+                      <th>Datum rezervacije</th>
+                      <th>Istice</th>
+                      <th>Podnosilac</th>
+                      <th class="align-center">status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Emocije</span>
+                      </td>
+                      <td>31.04.2022</td>
+                      <td>10.05.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="success">Knjiga izdata</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Homo Deus</span>
+                      </td>
+                      <td>05.11.2022</td>
+                      <td>25.11.2022</td>
+                      <td>Mijo Mijovic</td>
+                      <td class="success">Knjiga izdata</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Svijet</span>
+                      </td>
+                      <td>21.02.2022</td>
+                      <td>26.02.2022</td>
+                      <td>Nikolina Nikolic</td>
+                      <td class="danger">Rezervacija istekla</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Evgenije njegin</span>
+                      </td>
+                      <td>31.02.2022</td>
+                      <td>10.03.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="danger">Rezervacija odbijena</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robin Sarma</span>
+                      </td>
+                      <td>31.04.2022</td>
+                      <td>10.05.2022</td>
+                      <td>Mijo Mijovic</td>
+                      <td class="danger">Rezervacija otkazana</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Ilijada</span>
+                      </td>
+                      <td>10.05.2022</td>
+                      <td>25.06.2022</td>
+                      <td>Pero Perovic</td>
+                      <td class="success">Knjiga izdata</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-pagination">
+                <div class="chevs-left">
+                  <i class="bx bx-chevrons-left"></i>
+                </div>
+                <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+                <p>1 of 1</p>
+                <div class="chev-right">
+                  <i class="bx bx-chevron-right"></i>
+                </div>
+                <div class="chevs-right">
+                  <i class="bx bx-chevrons-right"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
