@@ -153,62 +153,231 @@
           <div class="scroll-tabs">
             <button
               class="tablinks active"
-              onclick="openSettings(event, 'policy')"
+              onclick="openTabs(event, 'first')"
               id="defaultOpen"
             >
               Polisa
             </button>
-            <button class="tablinks" onclick="openSettings(event, 'category')">
+            <button class="tablinks" onclick="openTabs(event, 'second')">
               Kategorije
             </button>
-            <button class="tablinks" onclick="openSettings(event, 'genre')">
+            <button class="tablinks" onclick="openTabs(event, 'third')">
               Zanrovi
             </button>
-            <button class="tablinks" onclick="openSettings(event, 'publisher')">
+            <button class="tablinks" onclick="openTabs(event, 'fourth')">
               Izdavac
             </button>
-            <button class="tablinks" onclick="openSettings(event, 'cover')">
+            <button class="tablinks" onclick="openTabs(event, 'fifth')">
               Povez
             </button>
-            <button class="tablinks" onclick="openSettings(event, 'format')">
+            <button class="tablinks" onclick="openTabs(event, 'sixth')">
               Format
             </button>
-            <button class="tablinks" onclick="openSettings(event, 'letter')">
+            <button class="tablinks" onclick="openTabs(event, 'seventh')">
               Pismo
             </button>
           </div>
 
-          <div id="policy" class="form-main">
+          <div id="first" class="form-main">
             <div class="form-left">
-              <h1>Polisa</h1>
+              <div class="policy-column">
+                <div class="policy-info">
+                  <h2>Rok za rezervaciju</h2>
+                  <p>
+                    (Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Enim necessitatibus sunt ullam repudiandae aspernatur)
+                  </p>
+                </div>
+                <div class="policy-input">
+                  <input type="text" name="" id="" />
+                  <p>dana</p>
+                </div>
+              </div>
+              <div class="policy-column">
+                <div class="policy-info">
+                  <h2>Rok vracanja</h2>
+                  <p>
+                    (Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Enim necessitatibus sunt ullam repudiandae aspernatur)
+                  </p>
+                </div>
+                <div class="policy-input">
+                  <input type="text" name="" id="" />
+                  <p>dana</p>
+                </div>
+              </div>
+              <div class="policy-column">
+                <div class="policy-info">
+                  <h2>Rok konflikta</h2>
+                  <p>
+                    (Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Enim necessitatibus sunt ullam repudiandae aspernatur)
+                  </p>
+                </div>
+                <div class="policy-input">
+                  <input type="text" name="" id="" />
+                  <p>dana</p>
+                </div>
+              </div>
+            </div>
+            <div class="policy-right">
+              <h2>Razlog zatvaranja rezervacije</h2>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
             </div>
           </div>
-          <div id="category" class="form-main">
-            <div class="form-left">
-              <h1>Kategorija</h1>
+
+          <div id="second" class="form-main">
+            <div class="table">
+              <div class="table-header">
+                <a class="btn-primary" href="#">Nova kategorija</a>
+              </div>
+              <div class="table-section">
+                <table>
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox" /></th>
+                      <th>Naziv kategorije</th>
+                      <th>Opis</th>
+                      <th>Izmijeni</th>
+                      <th>Izbrisi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <i class="bx bx-book-bookmark"></i>
+                        <span>Istorija</span>
+                      </td>
+                      <td>
+                        <span class="auth-info">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Facere perferendis perspiciatis ipsam
+                          repellendus hic!
+                        </span>
+                      </td>
+                      <td class="edit"><i class="bx bx-edit"></i></td>
+                      <td class="delete"><i class="bx bx-trash"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <i class="bx bx-book-bookmark"></i>
+                        <span>Pravo</span>
+                      </td>
+                      <td>
+                        <span class="auth-info">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Facere perferendis perspiciatis ipsam
+                          repellendus hic!
+                        </span>
+                      </td>
+                      <td class="edit"><i class="bx bx-edit"></i></td>
+                      <td class="delete"><i class="bx bx-trash"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <i class="bx bx-book-bookmark"></i>
+                        <span>Nauka</span>
+                      </td>
+                      <td>
+                        <span class="auth-info">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Facere perferendis perspiciatis ipsam
+                          repellendus hic!
+                        </span>
+                      </td>
+                      <td class="edit"><i class="bx bx-edit"></i></td>
+                      <td class="delete"><i class="bx bx-trash"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <i class="bx bx-book-bookmark"></i>
+                        <span>Hrana i pice</span>
+                      </td>
+                      <td>
+                        <span class="auth-info">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Facere perferendis perspiciatis ipsam
+                          repellendus hic!
+                        </span>
+                      </td>
+                      <td class="edit"><i class="bx bx-edit"></i></td>
+                      <td class="delete"><i class="bx bx-trash"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <i class="bx bx-book-bookmark"></i>
+                        <span>Djecije knjige</span>
+                      </td>
+                      <td>
+                        <span class="auth-info">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Facere perferendis perspiciatis ipsam
+                          repellendus hic!
+                        </span>
+                      </td>
+                      <td class="edit"><i class="bx bx-edit"></i></td>
+                      <td class="delete"><i class="bx bx-trash"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <i class="bx bx-book-bookmark"></i>
+                        <span>Priroda</span>
+                      </td>
+                      <td>
+                        <span class="auth-info">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Facere perferendis perspiciatis ipsam
+                          repellendus hic!
+                        </span>
+                      </td>
+                      <td class="edit"><i class="bx bx-edit"></i></td>
+                      <td class="delete"><i class="bx bx-trash"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-pagination">
+                <div class="chevs-left">
+                  <i class="bx bx-chevrons-left"></i>
+                </div>
+                <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+                <p>1 of 1</p>
+                <div class="chev-right">
+                  <i class="bx bx-chevron-right"></i>
+                </div>
+                <div class="chevs-right">
+                  <i class="bx bx-chevrons-right"></i>
+                </div>
+              </div>
             </div>
           </div>
-          <div id="genre" class="form-main">
+          <div id="third" class="form-main">
             <div class="form-left">
               <h1>Zanr</h1>
             </div>
           </div>
-          <div id="publisher" class="form-main">
+          <div id="fourth" class="form-main">
             <div class="form-left">
               <h1>Izdavac</h1>
             </div>
           </div>
-          <div id="cover" class="form-main">
+          <div id="fifth" class="form-main">
             <div class="form-left">
               <h1>Povez</h1>
             </div>
           </div>
-          <div id="format" class="form-main">
+          <div id="sixth" class="form-main">
             <div class="form-left">
               <h1>Format</h1>
             </div>
           </div>
-          <div id="letter" class="form-main">
+          <div id="seventh" class="form-main">
             <div class="form-left">
               <h1>Pismo</h1>
             </div>

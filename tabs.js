@@ -1,5 +1,5 @@
-function openSettings(evt, tabName) {
-  var i, tabcontent, tablinks;
+function openTabs(evt, tabName) {
+  let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("form-main");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].classList.add("hide");

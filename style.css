@@ -482,9 +482,20 @@ td .book {
   object-fit: contain;
 }
 
+td.danger {
+  background: #ac1c1c60;
+  color: #ac1c1c;
+  font-weight: 700;
+  text-align: center;
+}
+
 table i {
   cursor: pointer;
   font-size: 1.8rem;
+}
+
+table i.bx-edit,
+table i.bx-trash {
   padding-left: 2rem;
 }
 
@@ -791,6 +802,32 @@ button:last-child {
   text-align: center;
 }
 
+/* ====== Settings - Policy ====== */
+
+.policy-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.policy-column h2,
+.policy-right h2 {
+  margin-bottom: 1.5rem;
+}
+
+.policy-column p {
+  font-size: 1.3rem;
+}
+
+.policy-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.policy-column input {
+  margin-right: 1rem;
+}
 /* ====== Media Queries for Ipad and Up ====== */
 
 @media screen and (min-width: 768px) {
@@ -898,5 +935,20 @@ button:last-child {
 
   .edit-column a {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .policy-column {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .policy-column input {
+    width: 10rem;
+  }
+
+  .policy-column > * {
+    flex: 1;
   }
 }

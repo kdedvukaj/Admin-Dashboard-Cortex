@@ -16,6 +16,7 @@
     />
 
     <!-- Javascript -->
+    <script src="tabs.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -147,6 +148,163 @@
       <section class="home">
         <div class="heading">
           <h1>Izdavanje knjiga</h1>
+        </div>
+        <div class="table">
+          <div class="scroll-tabs">
+            <button
+              class="tablinks active"
+              onclick="openTabs(event, 'first')"
+              id="defaultOpen"
+            >
+              Izdate knjige
+            </button>
+            <button class="tablinks" onclick="openTabs(event, 'second')">
+              Vracene knjige
+            </button>
+            <button class="tablinks" onclick="openTabs(event, 'third')">
+              Knjige u prekoracenju
+            </button>
+            <button class="tablinks" onclick="openTabs(event, 'fourth')">
+              Aktivne rezervacije
+            </button>
+            <button class="tablinks" onclick="openTabs(event, 'fifth')">
+              Arhivirane rezervacije
+            </button>
+          </div>
+
+          <div id="first" class="form-main">
+            <div class="table">
+              <div class="table-header">
+                <div class="search">
+                  <input type="text" placeholder="Pretrazi knjige..." />
+                  <i class="bx bx-search icon"></i>
+                </div>
+              </div>
+              <div class="table-section">
+                <table>
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox" /></th>
+                      <th>Naziv knjige</th>
+                      <th>Izdato uceniku</th>
+                      <th>Datum izdavanja</th>
+                      <th>Zadrzavanje</th>
+                      <th>Knjigu izdao</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Geografija CG</span>
+                      </td>
+                      <td>Pero Perovic</td>
+                      <td>21.02.2022</td>
+                      <td>2 nedelje</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robin Sarma</span>
+                      </td>
+                      <td>Mijo Mijovic</td>
+                      <td>15.05.2020</td>
+                      <td>5 dana</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Tom Sojer</span>
+                      </td>
+                      <td>Jelena Vukovic</td>
+                      <td>13.01.2021</td>
+                      <td class="danger">1 mjesec</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robinson Kruso</span>
+                      </td>
+                      <td>Nikolina Nikolic</td>
+                      <td>21.12.2022</td>
+                      <td>2 dana</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Robin Sarma</span>
+                      </td>
+                      <td>Mijo Mijovic</td>
+                      <td>15.05.2020</td>
+                      <td class="danger">1 mjesec</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /></td>
+                      <td class="img-name-auth">
+                        <img class="book" src="./img/book.png" />
+                        <span>Geografija CG</span>
+                      </td>
+                      <td>Pero Perovic</td>
+                      <td>21.02.2022</td>
+                      <td>2 nedelje</td>
+                      <td>Valentina Kascelan</td>
+                      <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-pagination">
+                <div class="chevs-left">
+                  <i class="bx bx-chevrons-left"></i>
+                </div>
+                <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+                <p>1 of 1</p>
+                <div class="chev-right">
+                  <i class="bx bx-chevron-right"></i>
+                </div>
+                <div class="chevs-right">
+                  <i class="bx bx-chevrons-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="second" class="form-main">
+            <div class="form-left">
+              <h1>Vracene knjige</h1>
+            </div>
+          </div>
+          <div id="third" class="form-main">
+            <div class="form-left">
+              <h1>Knjige u prekoracenju</h1>
+            </div>
+          </div>
+          <div id="fourth" class="form-main">
+            <div class="form-left">
+              <h1>Aktivne rezervacije</h1>
+            </div>
+          </div>
+          <div id="fifth" class="form-main">
+            <div class="form-left">
+              <h1>Arhivirane rezervacije</h1>
+            </div>
+          </div>
         </div>
       </section>
     </div>
