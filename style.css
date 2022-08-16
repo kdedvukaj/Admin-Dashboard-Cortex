@@ -818,10 +818,15 @@ button:last-child {
   z-index: 2100;
 }
 
-.form-container {
+.form-container,
+.form-container-edit {
   background: var(--white-clr);
   padding: 4rem;
   width: 35rem;
+}
+
+.form-container-edit {
+  width: 30rem;
 }
 
 .form-container h1 {
@@ -831,6 +836,33 @@ button:last-child {
 
 .form-container .column {
   margin-top: 1rem;
+}
+
+.form-container-edit .column {
+  margin-top: 1.2rem;
+}
+
+.form-container-edit .column a {
+  display: flex;
+  align-items: center;
+}
+
+.form-container-edit a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--sidebar-clr);
+}
+
+.form-container-edit i {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.form-container-edit a:hover,
+.form-container-edit i:hover,
+.form-container-edit a:focus,
+.form-container-edit i:focus {
+  color: var(--primary-clr);
 }
 
 .reset-form-btn {

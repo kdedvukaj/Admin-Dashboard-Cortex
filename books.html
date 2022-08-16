@@ -17,8 +17,37 @@
 
     <!-- Javascript -->
     <script src="script.js" defer></script>
+    <script src="modal.js" defer></script>
   </head>
   <body>
+    <div id="overlay"></div>
+    <div id="modal">
+      <div class="form-container-edit">
+        <div class="column">
+          <a href="#"><i class="bx bx-receipt"></i> Pogledaj detalje</a>
+        </div>
+        <div class="column">
+          <a href="#"><i class="bx bx-edit"></i>Izmjeni knjigu</a>
+        </div>
+        <div class="column">
+          <a href="#"><i class="bx bx-list-check"></i>Izdaj knjigu</a>
+        </div>
+        <div class="column">
+          <a href="#"><i class="bx bx-calendar"></i>Rezervisi knjigu</a>
+        </div>
+        <div class="column">
+          <a href="#"><i class="bx bx-minus-back"></i>Vrati knjigu</a>
+        </div>
+        <div class="column">
+          <a href="#"
+            ><i class="bx bx-message-square-minus"></i>Otpisi knjigu</a
+          >
+        </div>
+        <div class="column">
+          <a href="#"><i class="bx bx-trash"></i>Izbrisi knjigu</a>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <!-- Sidebar Starts Here-->
       <nav class="sidebar close">
@@ -186,7 +215,12 @@
                   <td class="align-center"><a href="#">5</a></td>
                   <td class="align-center"><a href="#">3</a></td>
                   <td class="align-center">13</td>
-                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                  <td>
+                    <i
+                      class="bx bx-dots-vertical-rounded"
+                      id="bx-edit-book"
+                    ></i>
+                  </td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
@@ -201,7 +235,12 @@
                   <td class="align-center"><a href="#">9</a></td>
                   <td class="align-center"><a href="#">4</a></td>
                   <td class="align-center">13</td>
-                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                  <td>
+                    <i
+                      id="bx-edit-book"
+                      class="bx bx-dots-vertical-rounded"
+                    ></i>
+                  </td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
@@ -216,7 +255,12 @@
                   <td class="align-center"><a href="#">5</a></td>
                   <td class="align-center"><a href="#">6</a></td>
                   <td class="align-center">13</td>
-                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                  <td>
+                    <i
+                      id="bx-edit-book"
+                      class="bx bx-dots-vertical-rounded"
+                    ></i>
+                  </td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
@@ -231,7 +275,12 @@
                   <td class="align-center"><a href="#">29</a></td>
                   <td class="align-center"><a href="#">6</a></td>
                   <td class="align-center">13</td>
-                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                  <td>
+                    <i
+                      id="bx-edit-book"
+                      class="bx bx-dots-vertical-rounded"
+                    ></i>
+                  </td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
@@ -246,7 +295,12 @@
                   <td class="align-center"><a href="#">9</a></td>
                   <td class="align-center"><a href="#">6</a></td>
                   <td class="align-center">13</td>
-                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                  <td>
+                    <i
+                      id="bx-edit-book"
+                      class="bx bx-dots-vertical-rounded"
+                    ></i>
+                  </td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
@@ -261,7 +315,12 @@
                   <td class="align-center"><a href="#">23</a></td>
                   <td class="align-center"><a href="#">3</a></td>
                   <td class="align-center">10</td>
-                  <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                  <td>
+                    <i
+                      id="bx-edit-book"
+                      class="bx bx-dots-vertical-rounded"
+                    ></i>
+                  </td>
                 </tr>
               </tbody>
             </table>
