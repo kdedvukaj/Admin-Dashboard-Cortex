@@ -181,12 +181,17 @@
           <div class="table-header">
             <a class="btn-primary" href="./add-books.html">Nova knjiga</a>
             <div class="search">
-              <input type="text" placeholder="Search" />
+              <input
+                type="text"
+                id="searchInput"
+                onkeyup="tableSearch()"
+                placeholder="Search"
+              />
               <i class="bx bx-search icon"></i>
             </div>
           </div>
           <div class="table-section">
-            <table>
+            <table id="searchTable">
               <thead>
                 <tr>
                   <th><input type="checkbox" /></th>
