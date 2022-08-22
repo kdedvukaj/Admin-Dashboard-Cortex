@@ -9,6 +9,13 @@ let dropLink = document.querySelector(".drop-link");
 let profile = document.querySelector(".profile");
 let imgBtn = document.querySelector(".img-btn");
 
+function toggleCheck(source) {
+  checkboxes = document.getElementsByName("check");
+  for (var i = 0, n = checkboxes.length; i < n; i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+
 // Open - Close Sidebar menu icon
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");
@@ -81,6 +88,7 @@ function deleteRow(r) {
     document.getElementById("searchTable").deleteRow(i);
   }
 }
+
 // // Remove Profile Dropdown by clicking outside btn for Mobile
 // window.addEventListener("touchend", (e) => {
 //   if (e.target !== dropLink) {

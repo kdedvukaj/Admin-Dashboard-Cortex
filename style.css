@@ -568,13 +568,12 @@ input[type="checkbox"] {
 }
 
 .search {
-  background: #fff;
   width: 18rem;
   position: relative;
 }
 
 .search-book {
-  background: #fff;
+  background: var(--white-clr);
   width: 100%;
   position: relative;
 }
@@ -701,6 +700,10 @@ input:focus {
   text-align: center;
 }
 
+.about-p {
+  max-width: 50ch;
+}
+
 /* ====== Tabs ====== */
 .hide {
   transform: scale(0);
@@ -818,12 +821,16 @@ input:focus {
 
 .form-container,
 .form-container-edit {
-  background: var(--body-clr);
   padding: 4rem;
   width: 35rem;
 }
 
+.form-container {
+  background: var(--body-clr);
+}
+
 .form-container-edit {
+  background: var(--white-clr);
   width: 30rem;
 }
 
@@ -1019,5 +1026,9 @@ input:focus {
 
   .policy-column > * {
     flex: 1;
+  }
+
+  .about-p {
+    max-width: 45ch;
   }
 }
