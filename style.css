@@ -86,8 +86,23 @@ ul {
   padding: 1rem 1.5rem;
   border: none;
   cursor: pointer;
+  margin-right: 0.5rem;
 }
 
+.modal-btn button {
+  width: 100%;
+}
+
+.btn-secondary {
+  background: var(--primary-clr);
+  color: #fff;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  border: none;
+}
+
+.reset-form-btn button:hover,
 .form-btn button:hover,
 .btn-primary:hover {
   background: var(--primary-clr-hover);
@@ -803,7 +818,7 @@ input:focus {
 
 .form-container,
 .form-container-edit {
-  background: var(--white-clr);
+  background: var(--body-clr);
   padding: 4rem;
   width: 35rem;
 }

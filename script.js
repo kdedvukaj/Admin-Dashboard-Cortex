@@ -74,6 +74,13 @@ function tableSearch() {
   }
 }
 
+function deleteRow(r) {
+  let text = "Do you really want to delete?";
+  if (confirm(text) == true) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("searchTable").deleteRow(i);
+  }
+}
 // // Remove Profile Dropdown by clicking outside btn for Mobile
 // window.addEventListener("touchend", (e) => {
 //   if (e.target !== dropLink) {

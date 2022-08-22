@@ -13,6 +13,12 @@ bxEditBtns.forEach((item) => {
 });
 
 overlay.addEventListener("click", closeModal);
+closeModalBtn.addEventListener("click", closeModal);
+
+function closeModal() {
+  modal.style.display = "none";
+  overlay.style.display = "none";
+}
 
 resetPsw.addEventListener("click", () => {
   modal.style.display = "block";
