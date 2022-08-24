@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cortex Library | Novi autor</title>
+    <title>Cortex Library | Bibliotekari</title>
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -15,7 +15,6 @@
       rel="stylesheet"
     />
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
     <!-- Javascript -->
     <script src="script.js" defer></script>
   </head>
@@ -112,10 +111,10 @@
 
               <ul>
                 <li class="drop-link">
-                  <a href="./add-librarian.html">+ Bibliotekar</a>
+                  <a href="/add-librarian.html">+ Bibliotekar</a>
                 </li>
                 <li class="drop-link">
-                  <a href="./add-student.html">+ Ucenik</a>
+                  <a href="/add-student.html">+ Ucenik</a>
                 </li>
                 <li class="drop-link">
                   <a href="./add-books.html">+ Knjiga</a>
@@ -147,30 +146,115 @@
       <!-- Main Section Starts Here-->
       <section class="home">
         <div class="heading">
-          <h1>Novi autor</h1>
-          <p><a href="./authors.html">Evidencija autora</a> / Novi autor</p>
+          <h1>Bibliotekari</h1>
         </div>
         <div class="table">
-          <form>
-            <div class="form-main">
-              <div class="form-left">
-                <div class="column">
-                  <label for="name">Ime i prezime</label>
-                  <input type="text" id="name" />
-                </div>
-                <div class="column">
-                  <label for="type">Opis</label>
-                  <textarea name="content" id="editor"></textarea>
-                </div>
-              </div>
-              <div class="form-right"></div>
+          <div class="table-header">
+            <a class="btn-primary" href="./add-librarian.html"
+              >Novi bibliotekar</a
+            >
+            <div class="search">
+              <input
+                type="text"
+                id="searchInput"
+                onkeyup="tableSearch()"
+                placeholder="Search"
+              />
+              <i class="bx bx-search icon"></i>
             </div>
-            <div class="form-btn">
-              <button class="form-btn-secondary">Ponisti</button>
-              <button class="form-btn-primary">Sacuvaj</button>
-            </div>
-          </form>
+          </div>
+          <div class="table-section">
+            <table id="searchTable">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" onclick="toggleCheck(this)" /></th>
+                  <th>Ime i prezime</th>
+                  <th>Email</th>
+                  <th>Tip korisnika</th>
+                  <th>Online</th>
+                  <th>Izmijeni</th>
+                  <th>Izbrisi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" name="check" /></td>
+                  <td class="img-name">
+                    <div>
+                      <img src="./img/profile-valentina.jpg" />
+                      <span
+                        ><a href="./profile.html">Valentina Kascelan</a></span
+                      >
+                    </div>
+                  </td>
+                  <td>valentina.kascelan@test.com</td>
+                  <td>Bibliotekar</td>
+                  <td>Prije 10 sati</td>
+                  <td class="edit"><i class="bx bx-edit"></i></td>
+                  <td class="delete">
+                    <i onclick="deleteRow(this)" class="bx bx-trash"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" /></td>
+                  <td class="img-name">
+                    <div>
+                      <img src="./img/prof-one.jpg" />
+                      <span>Tarik Zaimovic</span>
+                    </div>
+                  </td>
+                  <td>tarik.z@test.com</td>
+                  <td>Bibliotekar</td>
+                  <td>Prije 2 sati</td>
+                  <td class="edit"><i class="bx bx-edit"></i></td>
+                  <td class="delete">
+                    <i onclick="deleteRow(this)" class="bx bx-trash"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" /></td>
+                  <td class="img-name">
+                    <div>
+                      <img src="./img/profile.jpg" />
+                      <span>Ivan Vukic</span>
+                    </div>
+                  </td>
+                  <td>ivukic94@test.com</td>
+                  <td>Bibliotekar</td>
+                  <td>Prije 5 sati</td>
+                  <td class="edit"><i class="bx bx-edit"></i></td>
+                  <td class="delete">
+                    <i onclick="deleteRow(this)" class="bx bx-trash"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" /></td>
+                  <td class="img-name">
+                    <div>
+                      <img src="./img/prof-two.jpg" />
+                      <span>Zana Knezevic</span>
+                    </div>
+                  </td>
+                  <td>zanaknezevic@test.com</td>
+                  <td>Bibliotekar</td>
+                  <td>Prije 30 min</td>
+                  <td class="edit"><i class="bx bx-edit"></i></td>
+                  <td class="delete">
+                    <i onclick="deleteRow(this)" class="bx bx-trash"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-pagination">
+            <div class="chevs-left"><i class="bx bx-chevrons-left"></i></div>
+            <div class="chev-left"><i class="bx bx-chevron-left"></i></div>
+            <p>1 of 1</p>
+            <div class="chev-right"><i class="bx bx-chevron-right"></i></div>
+            <div class="chevs-right"><i class="bx bx-chevrons-right"></i></div>
+          </div>
         </div>
+        <div class="spacer"></div>
       </section>
     </div>
   </body>

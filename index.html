@@ -4,342 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cortex Library | Admin Dashboard</title>
+    <title>Cortex Library | Log In</title>
 
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
 
-    <!-- Boxicons -->
+    <!-- Boxicons CSS -->
     <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
 
-    <!-- Javascript -->
-    <script src="script.js" defer></script>
-    <script>
-      window.onload = function () {
-        var chart = new CanvasJS.Chart("chartContainer", {
-          animationEnabled: true,
-          theme: "light2", // "light1", "light2", "dark1", "dark2"
-          title: {
-            text: "Trenutno Stanje Knjiga",
-          },
-          axisY: {
-            suffix: "%",
-          },
-
-          data: [
-            {
-              type: "column",
-              yValueFormatString: '#,##0.0#"%"',
-              dataPoints: [
-                { label: "Izdate", y: 71 },
-                { label: "Vracene", y: 67 },
-                { label: "Prekoracenju", y: 50 },
-                { label: "Aktivne", y: 56 },
-                { label: "Arhivirane", y: 30 },
-              ],
-            },
-          ],
-        });
-        chart.render();
-      };
-    </script>
+    <!-- JavaScript -->
+    <script src="./script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <!-- Sidebar Starts Here-->
-      <nav class="sidebar close">
-        <header>
-          <div class="image-text">
-            <span class="image">
-              <img src="./img/logo.png" alt="" />
-            </span>
-
-            <div class="text logo-text">
-              <span class="name">Cortex</span>
-              <span class="profession">Library</span>
+    <section class="container forms">
+      <div class="form login">
+        <div class="form-content">
+          <div class="img-div"><img src="./img/logo.png" alt="" /></div>
+          <header>Cortex Library</header>
+          <form action="">
+            <div class="column">
+              <input id="inputUser" type="text" placeholder="Username" />
             </div>
-          </div>
-          <i class="bx bx-right-arrow-alt toggle-ch"></i>
-        </header>
-
-        <!-- Sidebar Menu Starts Here -->
-        <div class="menu-bar">
-          <div class="menu">
-            <ul class="menu-links">
-              <li class="nav-link">
-                <a href="./index.html">
-                  <i class="bx bx-home-alt icon"></i>
-                  <span class="text nav-text">Dashboard</span>
-                </a>
-              </li>
-
-              <li class="nav-link">
-                <a href="./librarians.html">
-                  <i class="bx bx-group icon"></i>
-                  <span class="text nav-text">Bibliotekari</span>
-                </a>
-              </li>
-
-              <li class="nav-link">
-                <a href="./students.html">
-                  <i class="bx bx-id-card icon"></i>
-                  <span class="text nav-text">Ucenici</span>
-                </a>
-              </li>
-
-              <li class="nav-link">
-                <a href="./books.html">
-                  <i class="bx bx-book-alt icon"></i>
-                  <span class="text nav-text">Knjige</span>
-                </a>
-              </li>
-
-              <li class="nav-link">
-                <a href="./authors.html">
-                  <i class="bx bx-briefcase-alt-2 icon"></i>
-                  <span class="text nav-text">Autori</span>
-                </a>
-              </li>
-
-              <li class="nav-link">
-                <a href="./rental.html">
-                  <i class="bx bx-repost icon"></i>
-                  <span class="text nav-text">Izdavanje Knjiga</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bottom-content">
-            <ul>
-              <li class="nav-link">
-                <a href="./settings.html">
-                  <i class="bx bx-wrench icon"></i>
-                  <span class="text nav-text">Settings</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Head Navigation Starts Here-->
-      <div class="nav-head">
-        <div class="menu-toggle toggle">
-          <i class="bx bx-menu icon"></i>
-        </div>
-        <div class="right-side">
-          <div class="dropdown">
-            <div class="create">
-              <button>
-                <i class="bx bx-add-to-queue icon dropdown-btn"></i>
-              </button>
-
-              <ul>
-                <li class="drop-link">
-                  <a href="./add-librarian.html">+ Bibliotekar</a>
-                </li>
-                <li class="drop-link">
-                  <a href="./add-student.html">+ Ucenik</a>
-                </li>
-                <li class="drop-link">
-                  <a href="./add-books.html">+ Knjiga</a>
-                </li>
-                <li class="drop-link">
-                  <a href="./add-author.html">+ Autor</a>
-                </li>
-              </ul>
+            <div class="column">
+              <input type="password" id="inputPass" placeholder="Password" />
+              <i class="bx bx-hide eye-icon"></i>
             </div>
-          </div>
 
-          <div class="profile">
-            <div class="profile-img">
-              <img class="img-btn" src="./img/profile-valentina.jpg" alt="" />
+            <div class="column form-link">
+              <a href="#" class="forgot-pass">Zaboravili ste sifru?</a>
             </div>
-            <ul class="profile-links">
-              <li class="drop-link">
-                <a href="./profile.html"
-                  ><i class="bx bx-user icon"></i> Profile</a
-                >
-              </li>
-              <li class="drop-link">
-                <a href="#"><i class="bx bx-log-out-circle icon"></i> Logout</a>
-              </li>
-            </ul>
-          </div>
+
+            <div class="column button-field">
+              <button type="submit">Log In</button>
+            </div>
+          </form>
         </div>
       </div>
-      <!-- Main Section Starts Here-->
-      <section class="home">
-        <div class="heading">
-          <h1>Dashboard</h1>
-        </div>
-        <div class="box-group">
-          <div class="box-one">
-            <h2>AKTIVNOSTI</h2>
-            <div class="info-group">
-              <div class="info-box">
-                <div class="info-img">
-                  <img src="./img/profile-valentina.jpg" alt="" />
-                </div>
-                <div class="info-details">
-                  <span>IZDAVANJE KNJIGE - 4 days ago</span>
-                  <p>
-                    <a href="#">Valentina K.</a> je izdala knjigu
-                    <b>Tom Sojer</b> <a href="#">Peru Perovicu</a> dana
-                    <b>21.02.2021</b>. <a href="#">pogledaj detalje ></a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-box">
-                <div class="info-img">
-                  <img src="./img/prof-two.jpg" alt="" />
-                </div>
-                <div class="info-details">
-                  <span>VRACANJE KNJIGE - 14 days ago</span>
-                  <p>
-                    <a href="#">Zana K.</a> je izdala knjigu <b>Tom Sojer</b>
-                    <a href="#">Nikolini Nikolic</a> dana <b>23.05.2021</b>.
-                    <a href="#">pogledaj detalje ></a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-box">
-                <div class="info-img">
-                  <img src="./img/profile-valentina.jpg" alt="" />
-                </div>
-                <div class="info-details">
-                  <span>IZDAVANJE KNJIGE - 2 days ago</span>
-                  <p>
-                    <a href="#">Valentina K.</a> je izdala knjigu
-                    <b>Tom Sojer</b> <a href="#">Miju Mijovic</a> dana
-                    <b>1.02.2021</b>. <a href="#">pogledaj detalje ></a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-box">
-                <div class="info-img">
-                  <img src="./img/prof-two.jpg" alt="" />
-                </div>
-                <div class="info-details">
-                  <span>NOVA KNJIGA - 3 days ago</span>
-                  <p>
-                    <a href="#">Zana K.</a> je unijela novu knjigu
-                    <b>Tom Sojer</b> dana <b>21.02.2021</b>.
-                    <a href="#">pogledaj detalje ></a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-box">
-                <div class="info-img">
-                  <img src="./img/profile-valentina.jpg" alt="" />
-                </div>
-                <div class="info-details">
-                  <span>OBRISANA KNJIGA - 4 days ago</span>
-                  <p>
-                    <a href="#">Valentina K.</a> je brisala knjigu
-                    <b>Tom Sojer</b> dana <b>15.12.2021</b>.
-                    <a href="#">pogledaj detalje ></a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-box">
-                <div class="info-img">
-                  <img src="./img/prof-two.jpg" alt="" />
-                </div>
-                <div class="info-details">
-                  <span>IZDAVANJE KNJIGE - 4 days ago</span>
-                  <p>
-                    <a href="#">Zana K.</a> je izdala knjigu <b>Tom Sojer</b>
-                    <a href="#">Jeleni Vukovic</a> dana <b>8.08.2021</b>.
-                    <a href="#">pogledaj detalje ></a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-box">
-                <div class="info-img">
-                  <img src="./img/profile-valentina.jpg" alt="" />
-                </div>
-                <div class="info-details">
-                  <span>VRACANJE KNJIGE - 4 days ago</span>
-                  <p>
-                    <a href="#">Valentina K.</a> je izdala knjigu
-                    <b>Tom Sojer</b> <a href="#">Peru Perovicu</a> dana
-                    <b>21.02.2021</b>. <a href="#">pogledaj detalje ></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="box-two">
-            <h2>REZERVACIJE KNJIGA</h2>
-            <div class="table">
-              <div class="table-section">
-                <table id="searchTable">
-                  <tbody>
-                    <tr>
-                      <td class="img-name">
-                        <img src="./img/profil-pero.jpg" />
-                        <span><a href="./student.html">Pero Perovic</a></span>
-                      </td>
-                      <td>Tom Sojer</td>
-                      <td>31.04.2019</td>
-                      <td class="status flex-center">
-                        <i class="bx bx-check"></i>DA -
-                        <i class="bx bx-x"></i>NE
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="img-name">
-                        <img src="./img/prof-two.jpg" />
-                        <span>Nikolina Nikolic</span>
-                      </td>
-                      <td>Ilijada</td>
-                      <td>25.11.2022</td>
-                      <td class="status flex-center">
-                        <i class="bx bx-check"></i>DA -
-                        <i class="bx bx-x"></i>NE
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="img-name">
-                        <img src="./img/profil-pero.jpg" />
-                        <span><a href="./student.html">Pero Perovic</a></span>
-                      </td>
-                      <td>Robin Sarma</td>
-                      <td>26.02.2022</td>
-                      <td class="status flex-center">
-                        <i class="bx bx-check"></i>DA -
-                        <i class="bx bx-x"></i>NE
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="img-name">
-                        <img src="./img/prof-three.jpg" />
-                        <span>Jelena Vukovic</span>
-                      </td>
-                      <td>Budni u 5</td>
-                      <td>10.03.2022</td>
-                      <td class="status flex-center">
-                        <i class="bx bx-check"></i>DA -
-                        <i class="bx bx-x"></i>NE
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="box-three">
-            <h2>STATISTIKA</h2>
-            <div id="chartContainer" style="height: 200px; width: 100%"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-          </div>
-        </div>
-      </section>
-    </div>
+    </section>
   </body>
 </html>

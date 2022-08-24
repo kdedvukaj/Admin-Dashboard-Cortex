@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cortex Library | Nova knjiga</title>
+    <title>Cortex Library | Autor</title>
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -16,10 +16,9 @@
     />
 
     <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
-
     <!-- Javascript -->
-    <script src="tabs.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="modal.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -149,120 +148,30 @@
       <!-- Main Section Starts Here-->
       <section class="home">
         <div class="heading">
-          <h1>Nova knjiga</h1>
-          <p><a href="./books.html">Evidencija knjiga</a> / Nova knjiga</p>
+          <h1>Mark Twain</h1>
+          <p><a href="./authors.html">Evidencija autora</a> / Autor-242</p>
         </div>
         <div class="table">
-          <div class="tabs">
-            <button
-              class="tablinks active"
-              onclick="openTabs(event, 'first')"
-              id="defaultOpen"
-            >
-              Osnovni Detalji
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'second')">
-              Specifikacija
-            </button>
-            <button class="tablinks" onclick="openTabs(event, 'third')">
-              Multimedija
-            </button>
+          <div class="profile-main">
+            <div class="form-left">
+              <div class="column">
+                <span class="info-span">Ime i prezime</span>
+                <p>Mark Twain</p>
+              </div>
+              <div class="column">
+                <span class="info-span">Opis</span>
+                <p class="about-p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  dolor, quisquam quos neque eaque obcaecati laboriosam eveniet
+                  ipsam minima quis fugit tempora eligendi corrupti sit facere
+                  enim, rem deleniti modi!
+                </p>
+              </div>
+            </div>
+            <div class="profile-right"></div>
           </div>
-          <form>
-            <div id="first" class="form-main">
-              <div class="form-left">
-                <div class="column">
-                  <label for="name">Naziv knjige</label>
-                  <input type="text" id="name" />
-                </div>
-                <div class="column">
-                  <label for="type">Kratki sadrzaj</label>
-                  <textarea name="content" id="editor"></textarea>
-                </div>
-                <div class="column">
-                  <label for="category">Izaberite kategorije</label>
-                  <select name="category" id="category">
-                    <option value=""></option>
-                  </select>
-                </div>
-              </div>
-              <div class="">
-                <div class="column">
-                  <label for="genre">Izaberite zanrove</label>
-                  <select name="genre" id="genre">
-                    <option value=""></option>
-                  </select>
-                </div>
-                <div class="column">
-                  <label for="authors">Izaberite autora</label>
-                  <select name="authors" id="authors">
-                    <option value=""></option>
-                  </select>
-                </div>
-                <div class="column">
-                  <label for="publisher">Izdavac</label>
-                  <select name="publisher" id="publisher">
-                    <option value=""></option>
-                  </select>
-                </div>
-                <div class="column">
-                  <label for="year">Godina izdavanja</label>
-                  <input type="text" id="year" />
-                </div>
-                <div class="column">
-                  <label for="quantity">Kolicina</label>
-                  <input type="text" id="quantity" />
-                </div>
-              </div>
-            </div>
-            <div id="second" class="form-main">
-              <div class="form-left">
-                <div class="column">
-                  <label for="pageNr">Broj strana</label>
-                  <input type="text" id="pageNr" />
-                </div>
-                <div class="column">
-                  <label for="letter">Pismo</label>
-                  <select name="letter" id="letter">
-                    <option value=""></option>
-                  </select>
-                </div>
-                <div class="column">
-                  <label for="cover">Povez</label>
-                  <select name="cover" id="cover">
-                    <option value=""></option>
-                  </select>
-                </div>
-                <div class="column">
-                  <label for="size">Format</label>
-                  <select name="size" id="size">
-                    <option value=""></option>
-                  </select>
-                </div>
-                <div class="column">
-                  <label for="isbn">International Standard Book Nr</label>
-                  <input type="text" id="isbn" />
-                </div>
-              </div>
-              <div class=""></div>
-            </div>
-            <div id="third" class="form-main">
-              <div class="form-right">
-                <div class="img-column full-width">
-                  <label for="image-upload"
-                    ><i class="bx bx-cloud-upload"></i
-                  ></label>
-                  <input id="image-upload" type="file" />
-                  <p>Drop files to attach</p>
-                </div>
-              </div>
-            </div>
-            <div class="form-btn">
-              <button class="form-btn-secondary">Ponisti</button>
-              <button class="form-btn-primary">Sacuvaj</button>
-            </div>
-          </form>
         </div>
+        <div class="spacer"></div>
       </section>
     </div>
   </body>

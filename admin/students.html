@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cortex Library | Bibliotekari</title>
+    <title>Cortex Library | Ucenici</title>
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -111,10 +111,10 @@
 
               <ul>
                 <li class="drop-link">
-                  <a href="/add-librarian.html">+ Bibliotekar</a>
+                  <a href="./add-librarian.html">+ Bibliotekar</a>
                 </li>
                 <li class="drop-link">
-                  <a href="/add-student.html">+ Ucenik</a>
+                  <a href="./add-student.html">+ Ucenik</a>
                 </li>
                 <li class="drop-link">
                   <a href="./add-books.html">+ Knjiga</a>
@@ -146,13 +146,11 @@
       <!-- Main Section Starts Here-->
       <section class="home">
         <div class="heading">
-          <h1>Bibliotekari</h1>
+          <h1>Ucenici</h1>
         </div>
         <div class="table">
           <div class="table-header">
-            <a class="btn-primary" href="./add-librarian.html"
-              >Novi bibliotekar</a
-            >
+            <a class="btn-primary" href="./add-student.html">Novi ucenik</a>
             <div class="search">
               <input
                 type="text"
@@ -180,12 +178,14 @@
                 <tr>
                   <td><input type="checkbox" name="check" /></td>
                   <td class="img-name">
-                    <img src="./img/profile-valentina.jpg" />
-                    <span><a href="./profile.html">Valentina Kascelan</a></span>
+                    <div>
+                      <img src="./img/profil-pero.jpg" />
+                      <span><a href="./student.html">Pero Perovic</a></span>
+                    </div>
                   </td>
-                  <td>valentina.kascelan@test.com</td>
-                  <td>Bibliotekar</td>
-                  <td>Prije 10 sati</td>
+                  <td>pero.perovic@test.com</td>
+                  <td>Ucenik</td>
+                  <td>Prije 15 sati</td>
                   <td class="edit"><i class="bx bx-edit"></i></td>
                   <td class="delete">
                     <i onclick="deleteRow(this)" class="bx bx-trash"></i>
@@ -194,12 +194,14 @@
                 <tr>
                   <td><input type="checkbox" name="check" /></td>
                   <td class="img-name">
-                    <img src="./img/prof-one.jpg" />
-                    <span>Tarik Zaimovic</span>
+                    <div>
+                      <img src="./img/prof-two.jpg" />
+                      <span>Nikolina Nikolic</span>
+                    </div>
                   </td>
-                  <td>tarik.z@test.com</td>
-                  <td>Bibliotekar</td>
-                  <td>Prije 2 sati</td>
+                  <td>nnikolic@test.com</td>
+                  <td>Ucenik</td>
+                  <td>Prije 4 sati</td>
                   <td class="edit"><i class="bx bx-edit"></i></td>
                   <td class="delete">
                     <i onclick="deleteRow(this)" class="bx bx-trash"></i>
@@ -208,12 +210,14 @@
                 <tr>
                   <td><input type="checkbox" name="check" /></td>
                   <td class="img-name">
-                    <img src="./img/profile.jpg" />
-                    <span>Ivan Vukic</span>
+                    <div>
+                      <img src="./img/prof-one.jpg" />
+                      <span>Mijo Mijovic</span>
+                    </div>
                   </td>
-                  <td>ivukic94@test.com</td>
-                  <td>Bibliotekar</td>
-                  <td>Prije 5 sati</td>
+                  <td>mijovic85@test.com</td>
+                  <td>Ucenik</td>
+                  <td>Prije 7 sati</td>
                   <td class="edit"><i class="bx bx-edit"></i></td>
                   <td class="delete">
                     <i onclick="deleteRow(this)" class="bx bx-trash"></i>
@@ -222,12 +226,14 @@
                 <tr>
                   <td><input type="checkbox" name="check" /></td>
                   <td class="img-name">
-                    <img src="./img/prof-two.jpg" />
-                    <span>Zana Knezevic</span>
+                    <div>
+                      <img src="./img/prof-three.jpg" />
+                      <span>Jelena Vukovic</span>
+                    </div>
                   </td>
-                  <td>zanaknezevic@test.com</td>
-                  <td>Bibliotekar</td>
-                  <td>Prije 30 min</td>
+                  <td>jecav98@test.com</td>
+                  <td>Ucenik</td>
+                  <td>Prije 56 min</td>
                   <td class="edit"><i class="bx bx-edit"></i></td>
                   <td class="delete">
                     <i onclick="deleteRow(this)" class="bx bx-trash"></i>
@@ -244,6 +250,7 @@
             <div class="chevs-right"><i class="bx bx-chevrons-right"></i></div>
           </div>
         </div>
+        <div class="spacer"></div>
       </section>
     </div>
   </body>
