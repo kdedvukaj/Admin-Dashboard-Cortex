@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cortex Library | Knjiga - Tom Sojer</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Javascript -->
+    <script src="tabs.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="modal.js" defer></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div id="modal">
+      <div class="form-container">
+        <h1 class="align-center">
+          Da li zelite da vratite knjigu - Tom Sojer?
+        </h1>
+        <form>
+          <div class="reset-form-btn">
+            <button id="close-modal" class="form-btn-secondary">
+              Poni&scaron;ti
+            </button>
+            <button class="form-btn-primary">Vrati</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Sidebar Starts Here-->
+      <nav class="sidebar close">
+        <header>
+          <div class="image-text">
+            <span class="image">
+              <img src="./img/logo.png" alt="" />
+            </span>
+
+            <div class="text logo-text">
+              <span class="name">Cortex</span>
+              <span class="profession">Library</span>
+            </div>
+          </div>
+          <i class="bx bx-right-arrow-alt toggle-ch"></i>
+        </header>
+
+        <!-- Sidebar Menu Starts Here -->
+        <div class="menu-bar">
+          <div class="menu">
+            <ul class="menu-links">
+              <li class="nav-link">
+                <a href="./index.html">
+                  <i class="bx bx-home-alt icon"></i>
+                  <span class="text nav-text">Dashboard</span>
+                </a>
+              </li>
+
+              <li class="nav-link">
+                <a href="./librarians.html">
+                  <i class="bx bx-group icon"></i>
+                  <span class="text nav-text">Bibliotekari</span>
+                </a>
+              </li>
+
+              <li class="nav-link">
+                <a href="./students.html">
+                  <i class="bx bx-id-card icon"></i>
+                  <span class="text nav-text">Ucenici</span>
+                </a>
+              </li>
+
+              <li class="nav-link">
+                <a href="./books.html">
+                  <i class="bx bx-book-alt icon"></i>
+                  <span class="text nav-text">Knjige</span>
+                </a>
+              </li>
+
+              <li class="nav-link">
+                <a href="./authors.html">
+                  <i class="bx bx-briefcase-alt-2 icon"></i>
+                  <span class="text nav-text">Autori</span>
+                </a>
+              </li>
+
+              <li class="nav-link">
+                <a href="./rental.html">
+                  <i class="bx bx-repost icon"></i>
+                  <span class="text nav-text">Izdavanje Knjiga</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bottom-content">
+            <ul>
+              <li class="nav-link">
+                <a href="./settings.html">
+                  <i class="bx bx-wrench icon"></i>
+                  <span class="text nav-text">Settings</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Head Navigation Starts Here-->
+      <div class="nav-head">
+        <div class="menu-toggle toggle">
+          <i class="bx bx-menu icon"></i>
+        </div>
+        <div class="right-side">
+          <div class="dropdown">
+            <div class="create">
+              <button>
+                <i class="bx bx-add-to-queue icon dropdown-btn"></i>
+              </button>
+
+              <ul>
+                <li class="drop-link">
+                  <a href="./add-librarian.html">+ Bibliotekar</a>
+                </li>
+                <li class="drop-link">
+                  <a href="./add-student.html">+ Ucenik</a>
+                </li>
+                <li class="drop-link">
+                  <a href="./add-books.html">+ Knjiga</a>
+                </li>
+                <li class="drop-link">
+                  <a href="./add-author.html">+ Autor</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="profile">
+            <div class="profile-img">
+              <img class="img-btn" src="./img/profile-valentina.jpg" alt="" />
+            </div>
+            <ul class="profile-links">
+              <li class="drop-link">
+                <a href="./profile.html"
+                  ><i class="bx bx-user icon"></i> Profile</a
+                >
+              </li>
+              <li class="drop-link">
+                <a href="../index.html"
+                  ><i class="bx bx-log-out-circle icon"></i> Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Main Section Starts Here-->
+      <section class="home">
+        <div class="heading">
+          <h1>Tom Sojer</h1>
+          <p><a href="./rental.html">Evidencija knjiga</a> / ID-242</p>
+        </div>
+        <div class="book-container">
+          <div class="table">
+            <div class="scroll-tabs">
+              <button
+                class="tablinks active"
+                onclick="openTabs(event, 'first')"
+                id="defaultOpen"
+              >
+                Osnivno detalji
+              </button>
+              <button class="tablinks" onclick="openTabs(event, 'second')">
+                Specifikacija
+              </button>
+              <button class="tablinks" onclick="openTabs(event, 'third')">
+                Evidencija
+              </button>
+              <button class="tablinks" onclick="openTabs(event, 'fourth')">
+                Multimedija
+              </button>
+            </div>
+
+            <div id="first" class="form-main">
+              <div class="form-left">
+                <div class="column">
+                  <span class="info-span">Naziv knjige</span>
+                  <p>Tom Sojer</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Kategorija</span>
+                  <p>Romani</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Zanr</span>
+                  <p>Knjige za djecu</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Autor</span>
+                  <p>Mark Twain</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Izdavac</span>
+                  <p>Delfi knjizare</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Godina izdavanja</span>
+                  <p>30.03.2011</p>
+                </div>
+              </div>
+              <div class="profile-right">
+                <div class="column">
+                  <span class="info-span">Storyline</span>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem est maxime error. Molestias dolor ea similique
+                    dolores tempore, doloribus blanditiis inventore repellendus
+                    velit. Velit maiores, deleniti non placeat aliquid itaque?
+                  </p>
+                  <div class="edit-column">
+                    <a href="./book-write-off.html"
+                      ><i class="bx bx-up-arrow-alt"></i> Otpi&scaron;i knjgu</a
+                    >
+                    <a href="#" id="reset-psw"
+                      ><i class="bx bx-list-check"></i> Izdaj knjigu</a
+                    >
+                    <a href="./book-return.html"
+                      ><i class="bx bx-minus-back"></i>Vrati Knjigu</a
+                    >
+                    <a href="#"
+                      ><i class="bx bx-calendar"></i>Rezervi&scaron;i Knjigu</a
+                    >
+                    <a href="#"><i class="bx bx-edit"></i>Izmijeni Knjigu</a>
+                    <a href="#"
+                      ><i class="bx bx-trash"></i>Izbri&scaron;i Knjigu</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="second" class="form-main">
+              <div class="form-left">
+                <div class="column">
+                  <span class="info-span">Broj strana</span>
+                  <p>264</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Pismo</span>
+                  <p>Cirilica</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Jezik</span>
+                  <p>Crnogorski</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Povez</span>
+                  <p>Tvrd</p>
+                </div>
+                <div class="column">
+                  <span class="info-span">Format</span>
+                  <p>21 cm</p>
+                </div>
+                <div class="column">
+                  <span class="info-span"
+                    >Internation Standard Book Nr (ISBN)</span
+                  >
+                  <p>1546213456878</p>
+                </div>
+              </div>
+            </div>
+            <div id="third" class="form-main">
+              <div class="table">
+                <div class="table-section">
+                  <table id="searchTable">
+                    <thead>
+                      <tr>
+                        <th>
+                          <input type="checkbox" onclick="toggleCheck(this)" />
+                        </th>
+                        <th>Izdato uceniku</th>
+                        <th>Datum izdavanja</th>
+                        <th>Zadrzavanje</th>
+                        <th>Knjigu izdao</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="check" />
+                        </td>
+                        <td>Pero Perovic</td>
+                        <td>21.02.2022</td>
+                        <td>2 nedelje</td>
+                        <td>Valentina Kascelan</td>
+                        <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="check" />
+                        </td>
+                        <td>Pero Perovic</td>
+                        <td>15.05.2020</td>
+                        <td>5 dana</td>
+                        <td>Valentina Kascelan</td>
+                        <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="check" />
+                        </td>
+                        <td>Pero Perovic</td>
+                        <td>13.01.2021</td>
+                        <td class="danger">1 mjesec</td>
+                        <td>Valentina Kascelan</td>
+                        <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="check" />
+                        </td>
+                        <td>Pero Perovic</td>
+                        <td>21.12.2022</td>
+                        <td>2 dana</td>
+                        <td>Valentina Kascelan</td>
+                        <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="check" />
+                        </td>
+
+                        <td>Pero Perovic</td>
+                        <td>15.05.2020</td>
+                        <td class="danger">1 mjesec</td>
+                        <td>Valentina Kascelan</td>
+                        <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="check" />
+                        </td>
+                        <td>Pero Perovic</td>
+                        <td>21.02.2022</td>
+                        <td>2 nedelje</td>
+                        <td>Valentina Kascelan</td>
+                        <td><i class="bx bx-dots-vertical-rounded"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="table-pagination">
+                  <div class="chevs-left">
+                    <i class="bx bx-chevrons-left"></i>
+                  </div>
+                  <div class="chev-left">
+                    <i class="bx bx-chevron-left"></i>
+                  </div>
+                  <p>1 of 1</p>
+                  <div class="chev-right">
+                    <i class="bx bx-chevron-right"></i>
+                  </div>
+                  <div class="chevs-right">
+                    <i class="bx bx-chevrons-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="fourth" class="form-main"></div>
+          </div>
+          <div class="book-info-right">
+            <div class="book-statistic">
+              <p class="book-p">Na raspolaganju: 5 primjeraka</p>
+              <p class="book-p">Rezervisano : 2 primjerka</p>
+              <p class="book-p">Izdato: 10 primjeraka</p>
+              <p class="book-p">U prekoracenju: 2 primjerka</p>
+              <p class="book-p">Ukupna kolicina: 15 primjeraka</p>
+            </div>
+            <div class="book-rental-info">
+              <div class="info-box">
+                <div class="info-details">
+                  <span>IZDAVANJE KNJIGE - 4 days ago</span>
+                  <p>
+                    <a href="#">Valentina K.</a> je izdala knjigu
+                    <b>Tom Sojer</b> <a href="#">Peru Perovicu</a> dana
+                    <b>21.02.2021</b>. <a href="#">pogledaj detalje ></a>
+                  </p>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="info-details">
+                  <span>IZDAVANJE KNJIGE - 4 days ago</span>
+                  <p>
+                    <a href="#">Valentina K.</a> je izdala knjigu
+                    <b>Tom Sojer</b> <a href="#">Peru Perovicu</a> dana
+                    <b>21.02.2021</b>. <a href="#">pogledaj detalje ></a>
+                  </p>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="info-details">
+                  <span>IZDAVANJE KNJIGE - 4 days ago</span>
+                  <p>
+                    <a href="#">Valentina K.</a> je izdala knjigu
+                    <b>Tom Sojer</b> <a href="#">Peru Perovicu</a> dana
+                    <b>21.02.2021</b>. <a href="#">pogledaj detalje ></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer"></div>
+      </section>
+    </div>
+  </body>
+</html>

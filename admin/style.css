@@ -497,6 +497,7 @@ td.img-name img {
   border-radius: 50%;
 }
 
+.akcija > div,
 .status > div,
 .img-name > div,
 .img-name-auth > div {
@@ -513,35 +514,34 @@ td .book {
 }
 
 td.danger {
-  background: #ac1c1c60;
   color: #ac1c1c;
   font-weight: 700;
-  text-align: center;
 }
 
-td.warning {
-  background: #ce8c11;
-  color: var(--white-clr);
+td.reserved {
+  color: var(--primary-clr);
   font-weight: 700;
-  text-align: center;
 }
 
 td.success {
-  background: #30b35c;
-  color: var(--white-clr);
+  color: #085321;
   font-weight: 700;
-  text-align: center;
+}
+
+td.status i,
+td.akcija i {
+  font-size: 2.5rem;
 }
 
 td.status i {
-  font-size: 2.5rem;
   margin-right: 1rem;
 }
-
+td.akcija i.bx-check,
 td.status i.bx-check {
   color: #0b722d;
 }
 
+td.akcija i.bx-x,
 td.status i.bx-x {
   color: #ac1c1c;
 }
@@ -775,7 +775,8 @@ input:focus {
   display: block;
 }
 
-.info-span {
+.info-span,
+.book-p {
   font-size: 1.3rem;
   color: var(--sidebar-clr);
 }
@@ -949,6 +950,10 @@ input:focus {
   padding-bottom: 1.5rem;
 }
 
+.box-three {
+  position: relative;
+}
+
 .status.flex-center i {
   margin: 0;
 }
@@ -957,6 +962,25 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#chartContainer {
+  height: 200px;
+  width: auto;
+}
+
+/* ====== Book Css  ====== */
+
+.profile-right p {
+  width: 45ch;
+}
+
+.book-info-right {
+  padding: 2rem 0;
+}
+
+.book-statistic p {
+  padding: 0.5rem 0;
 }
 
 /* ====== Media Queries for Ipad and Up ====== */
@@ -1059,7 +1083,8 @@ input:focus {
     flex-direction: row;
   }
 
-  .info-span {
+  .info-span,
+  .book-p {
     font-size: 1.5rem;
   }
 
@@ -1081,6 +1106,9 @@ input:focus {
 }
 
 @media screen and (min-width: 992px) {
+  .modal-btn.show button {
+    width: 68rem;
+  }
   .policy-column {
     flex-direction: row;
     gap: 3rem;
@@ -1097,28 +1125,32 @@ input:focus {
   .about-p {
     max-width: 45ch;
   }
-}
 
-@media screen and (min-width: 1250px) {
-  .box-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  @media screen and (min-width: 1250px) {
+    .box-group {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 40px;
+    }
 
-    grid-column-gap: 0px;
-    grid-row-gap: 40px;
-  }
+    .box-one {
+      min-width: 80rem;
+    }
 
-  .box-one {
-    min-width: 80rem;
-  }
+    .box-one {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+    .box-two {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .box-three {
+      grid-area: 2 / 2 / 3 / 3;
+    }
 
-  .box-one {
-    grid-area: 1 / 1 / 3 / 2;
-  }
-  .box-two {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-  .box-three {
-    grid-area: 2 / 2 / 3 / 3;
+    .book-container {
+      display: flex;
+      gap: 2rem;
+    }
   }
 }

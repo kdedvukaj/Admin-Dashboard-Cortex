@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cortex Library | Novi autor</title>
+    <title>Cortex Library | Knjiga - Tom Sojer</title>
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -14,12 +14,28 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
-
-    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
     <!-- Javascript -->
+    <script src="tabs.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="modal.js" defer></script>
   </head>
   <body>
+    <div id="overlay"></div>
+    <div id="modal">
+      <div class="form-container">
+        <h1 class="align-center">
+          Da li zelite da vratite knjigu - Tom Sojer?
+        </h1>
+        <form>
+          <div class="reset-form-btn">
+            <button id="close-modal" class="form-btn-secondary">
+              Poni&scaron;ti
+            </button>
+            <button class="form-btn-primary">Vrati</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="container">
       <!-- Sidebar Starts Here-->
       <nav class="sidebar close">
@@ -149,29 +165,93 @@
       <!-- Main Section Starts Here-->
       <section class="home">
         <div class="heading">
-          <h1>Novi autor</h1>
-          <p><a href="./authors.html">Evidencija autora</a> / Novi autor</p>
+          <h1>Tom Sojer</h1>
+          <p>
+            <a href="./rental.html">Evidencija knjiga</a> / ID-242 / Otpisi
+            Knjigu
+          </p>
         </div>
         <div class="table">
-          <form>
-            <div class="form-main">
-              <div class="form-left">
-                <div class="column">
-                  <label for="name">Ime i prezime</label>
-                  <input type="text" id="name" />
-                </div>
-                <div class="column">
-                  <label for="type">Opis</label>
-                  <textarea name="content" id="editor"></textarea>
-                </div>
-              </div>
-              <div class="form-right"></div>
+          <div class="table-header">
+            <div class=""></div>
+            <div class="search-book">
+              <input
+                type="text"
+                id="searchInput"
+                onkeyup="tableSearch()"
+                placeholder="Pretrazi knjige..."
+              />
+              <i class="bx bx-search icon"></i>
             </div>
-            <div class="form-btn">
-              <button class="form-btn-secondary">Ponisti</button>
-              <button class="form-btn-primary">Sacuvaj</button>
-            </div>
-          </form>
+          </div>
+          <div class="table-section">
+            <table id="searchTable">
+              <thead>
+                <tr>
+                  <th>
+                    <input type="checkbox" onclick="toggleCheck(this)" />
+                  </th>
+                  <th>Izdato uceniku</th>
+                  <th>Datum izdavanja</th>
+                  <th>Zadrzavanje</th>
+                  <th>Prekoracenje</th>
+                  <th>Knjigu izdao</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check" />
+                  </td>
+                  <td>Pero Perovic</td>
+                  <td>21.02.2022</td>
+                  <td>2 nedelje</td>
+                  <td class="danger">20 dana</td>
+                  <td>Valentina Kascelan</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check" />
+                  </td>
+                  <td>Mijo Mijovic</td>
+                  <td>15.05.2020</td>
+                  <td>5 dana</td>
+                  <td class="danger">20 dana</td>
+                  <td>Valentina Kascelan</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check" />
+                  </td>
+                  <td>Jelena Vukovic</td>
+                  <td>13.01.2021</td>
+                  <td class="danger">1 mjesec</td>
+                  <td class="danger">20 dana</td>
+                  <td>Valentina Kascelan</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check" />
+                  </td>
+                  <td>Nikolina Nikolic</td>
+                  <td>21.12.2022</td>
+                  <td>2 dana</td>
+                  <td class="danger">20 dana</td>
+                  <td>Valentina Kascelan</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check" />
+                  </td>
+                  <td>Mijo Mijovic</td>
+                  <td>15.05.2020</td>
+                  <td class="danger">1 mjesec</td>
+                  <td class="danger">20 dana</td>
+                  <td>Valentina Kascelan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="spacer"></div>
       </section>
