@@ -167,112 +167,35 @@
         <div class="heading">
           <h1>Tom Sojer</h1>
           <p>
-            <a href="./rental.html">Evidencija knjiga</a> / ID-242 / Otpisi
+            <a href="./rental.html">Evidencija knjiga</a> / ID-242 / Rezervisi
             Knjigu
           </p>
         </div>
+        <h1 class="book-heading">Rezervisi knjigu</h1>
         <div class="table">
-          <div class="table-header">
-            <div class=""></div>
-            <div class="search-book">
-              <input
-                type="text"
-                id="searchInput"
-                onkeyup="tableSearch()"
-                placeholder="Pretrazi knjige..."
-              />
-              <i class="bx bx-search icon"></i>
+          <form>
+            <div class="form-main">
+              <div class="form-left">
+                <div class="column">
+                  <label for="name"
+                    >Izaberi ucenika za koga se knjiga rezervise</label
+                  >
+                  <select name="" id="">
+                    <option value=""></option>
+                    <option value="">Pero Perovic</option>
+                  </select>
+                </div>
+                <div class="column">
+                  <label for="type">Datum rezervisanja</label>
+                  <input type="date" name="" id="" />
+                </div>
+              </div>
+              <div class="form-right"></div>
             </div>
-          </div>
-          <div class="table-section">
-            <table id="searchTable">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Izdato uceniku</th>
-                  <th>Datum izdavanja</th>
-                  <th>Zadrzavanje</th>
-                  <th>Prekoracenje</th>
-                  <th>Knjigu izdao</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="check"
-                      onclick="toggleCheckBtn(this)"
-                    />
-                  </td>
-                  <td>Pero Perovic</td>
-                  <td>21.02.2022</td>
-                  <td>2 nedelje</td>
-                  <td class="danger">20 dana</td>
-                  <td>Valentina Kascelan</td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="check"
-                      onclick="toggleCheckBtn(this)"
-                    />
-                  </td>
-                  <td>Mijo Mijovic</td>
-                  <td>15.05.2020</td>
-                  <td>5 dana</td>
-                  <td class="danger">20 dana</td>
-                  <td>Valentina Kascelan</td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="check"
-                      onclick="toggleCheckBtn(this)"
-                    />
-                  </td>
-                  <td>Jelena Vukovic</td>
-                  <td>13.01.2021</td>
-                  <td class="danger">1 mjesec</td>
-                  <td class="danger">20 dana</td>
-                  <td>Valentina Kascelan</td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="check"
-                      onclick="toggleCheckBtn(this)"
-                    />
-                  </td>
-                  <td>Nikolina Nikolic</td>
-                  <td>21.12.2022</td>
-                  <td>2 dana</td>
-                  <td class="danger">20 dana</td>
-                  <td>Valentina Kascelan</td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="checkbox"
-                      name="check"
-                      onclick="toggleCheckBtn(this)"
-                    />
-                  </td>
-                  <td>Mijo Mijovic</td>
-                  <td>15.05.2020</td>
-                  <td class="danger">1 mjesec</td>
-                  <td class="danger">20 dana</td>
-                  <td>Valentina Kascelan</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          </form>
           <div class="btn-group">
             <a href="./book.html" class="btn-secondary">Nazad</a>
-            <a href="#" class="btn-primary">Otpisi knjigu</a>
+            <a href="#" class="btn-primary">Rezervisi knjigu</a>
           </div>
         </div>
         <div class="spacer"></div>

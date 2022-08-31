@@ -84,34 +84,51 @@ ul {
 }
 
 .btn-primary,
+.btn-secondary,
 .form-btn button,
 .reset-form-btn button {
-  background: var(--primary-clr);
-  color: var(--white-clr);
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
-  border: none;
   cursor: pointer;
   margin-right: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--primary-clr);
+  color: var(--white-clr);
+}
+
+.form-btn-primary {
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  border: none;
+}
+
+.btn-secondary,
+.form-btn-secondary {
+  color: var(--sidebar-clr);
+  background: var(--body-clr);
+  border: 1px solid #cacaca;
 }
 
 .modal-btn button {
   width: 100%;
 }
 
-.btn-secondary {
-  background: var(--primary-clr);
-  color: #fff;
-  width: 100%;
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem;
-  border: none;
-}
-
-.reset-form-btn button:hover,
-.form-btn button:hover,
+.form-btn-primary:hover,
 .btn-primary:hover {
   background: var(--primary-clr-hover);
+}
+
+.btn-secondary:hover,
+.reset-form-btn button:hover,
+.form-btn-secondary:hover {
+  border-color: var(--primary-clr);
+}
+
+.btn-group {
+  margin: 3rem 0;
 }
 
 /* ===== Sidebar ===== */
@@ -610,6 +627,11 @@ input:focus,
   border-color: var(--primary-clr);
 }
 
+input[type="date"] {
+  width: 22rem;
+  padding: 0 1.5rem;
+}
+
 .search .icon,
 .search-book .icon {
   position: absolute;
@@ -879,6 +901,14 @@ input:focus {
   color: var(--primary-clr);
 }
 
+.edit-column a {
+  color: var(--primary-clr);
+}
+
+.edit-column a:hover {
+  color: var(--primary-clr-hover);
+}
+
 .reset-form-btn {
   margin-top: 2rem;
   text-align: center;
@@ -983,6 +1013,35 @@ input:focus {
   padding: 0.5rem 0;
 }
 
+.unavailable-book h2 {
+  font-size: 1.8rem;
+  color: #ac1c1c;
+  margin-bottom: 2rem;
+}
+
+.book-heading {
+  font-size: 1.8rem;
+  color: var(--sidebar-clr);
+}
+
+.unavailable-book p {
+  margin-bottom: 2rem;
+}
+
+.btn-group .btn-primary {
+  display: none;
+}
+
+#edit-table,
+#delete-table {
+  background: #78a4f7;
+}
+
+#edit-table a,
+#delete-table a {
+  color: var(--white-clr);
+}
+
 /* ====== Media Queries for Ipad and Up ====== */
 
 @media screen and (min-width: 768px) {
@@ -1025,7 +1084,8 @@ input:focus {
 
   .form-btn button,
   .reset-form-btn button,
-  .btn-primary {
+  .btn-primary,
+  .btn-secondary {
     font-size: 1.7rem;
   }
 

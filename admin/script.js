@@ -10,9 +10,47 @@ let profile = document.querySelector(".profile");
 let imgBtn = document.querySelector(".img-btn");
 
 function toggleCheck(source) {
+  let tableHead = document.querySelector("#table-head");
+  let deleteTable = document.querySelector("#delete-table");
   checkboxes = document.getElementsByName("check");
   for (var i = 0, n = checkboxes.length; i < n; i++) {
     checkboxes[i].checked = source.checked;
+  }
+  deleteTable.classList.toggle("hide");
+  tableHead.classList.toggle("hide");
+}
+
+function toggleCheckRemove(source) {
+  let tableHead = document.querySelector("#table-head");
+  let deleteTable = document.querySelector("#delete-table");
+  let mainCheck = document.querySelector("#main-check");
+  checkboxes = document.getElementsByName("check");
+  for (var i = 0, n = checkboxes.length; i < n; i++) {
+    checkboxes[i].checked = false;
+  }
+  mainCheck.checked = false;
+  deleteTable.classList.add("hide");
+  tableHead.classList.remove("hide");
+}
+
+function toggleCheckBtn(source) {
+  let btnPrimary = document.querySelector(".btn-group .btn-primary");
+  if (source.checked) {
+    btnPrimary.style.display = "inline";
+  } else {
+    btnPrimary.style.display = "none";
+  }
+}
+
+function toggleCheckHide(source) {
+  let editTable = document.querySelector("#edit-table");
+  let tableHead = document.querySelector("#table-head");
+  if (source.checked) {
+    editTable.classList.remove("hide");
+    tableHead.classList.add("hide");
+  } else {
+    editTable.classList.add("hide");
+    tableHead.classList.remove("hide");
   }
 }
 
