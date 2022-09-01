@@ -13,7 +13,8 @@
   --primary-clr: #695cfe;
   --primary-clr-hover: #4a3bf0;
   --white-clr: #fff;
-  --red-clr: #ac1c1c;
+  --red-clr: #ef0026;
+  --green-clr: #00946b;
   --text-clr: #c2c7d0;
 
   /* ====== Transition ====== */
@@ -129,6 +130,10 @@ ul {
 
 .btn-group {
   margin: 3rem 0;
+}
+
+.red {
+  color: var(--red-clr);
 }
 
 /* ===== Sidebar ===== */
@@ -531,7 +536,7 @@ td .book {
 }
 
 td.danger {
-  color: #ac1c1c;
+  color: var(--red-clr);
   font-weight: 700;
 }
 
@@ -541,7 +546,7 @@ td.reserved {
 }
 
 td.success {
-  color: #085321;
+  color: var(--green-clr);
   font-weight: 700;
 }
 
@@ -555,12 +560,12 @@ td.status i {
 }
 td.akcija i.bx-check,
 td.status i.bx-check {
-  color: #0b722d;
+  color: var(--green-clr);
 }
 
 td.akcija i.bx-x,
 td.status i.bx-x {
-  color: #ac1c1c;
+  color: var(--red-clr);
 }
 
 table i {
@@ -999,10 +1004,16 @@ input:focus {
   width: auto;
 }
 
+.info-group .btn-secondary {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
 /* ====== Book Css  ====== */
 
 .profile-right p {
-  width: 45ch;
+  max-width: 45ch;
 }
 
 .book-info-right {
@@ -1015,7 +1026,7 @@ input:focus {
 
 .unavailable-book h2 {
   font-size: 1.8rem;
-  color: #ac1c1c;
+  color: var(--red-clr);
   margin-bottom: 2rem;
 }
 
@@ -1030,6 +1041,11 @@ input:focus {
 
 .btn-group .btn-primary {
   display: none;
+}
+
+.show-news {
+  color: var(--primary-clr);
+  font-size: 1.4rem;
 }
 
 #edit-table,
@@ -1166,7 +1182,7 @@ input:focus {
 }
 
 @media screen and (min-width: 992px) {
-  .modal-btn.show button {
+  .info-group .btn-secondary {
     width: 68rem;
   }
   .policy-column {
@@ -1185,32 +1201,36 @@ input:focus {
   .about-p {
     max-width: 45ch;
   }
+}
 
-  @media screen and (min-width: 1250px) {
-    .box-group {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 40px;
-    }
+@media screen and (min-width: 1250px) {
+  .box-group {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
 
-    .box-one {
-      min-width: 80rem;
-    }
+  .box-one {
+    min-width: 80rem;
+  }
 
-    .box-one {
-      grid-area: 1 / 1 / 3 / 2;
-    }
-    .box-two {
-      grid-area: 1 / 2 / 2 / 3;
-    }
-    .box-three {
-      grid-area: 2 / 2 / 3 / 3;
-    }
+  .box-one {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .box-two {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .box-three {
+    grid-area: 2 / 2 / 3 / 3;
+  }
 
-    .book-container {
-      display: flex;
-      gap: 2rem;
-    }
+  .box-one,
+  .box-two,
+  .box-three {
+    margin-bottom: 0;
+  }
+
+  .book-container {
+    display: flex;
+    gap: 2rem;
   }
 }
