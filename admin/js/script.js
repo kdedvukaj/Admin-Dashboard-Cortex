@@ -8,37 +8,8 @@ let dropdownBtn = document.querySelector(".dropdown-btn");
 let dropLink = document.querySelector(".drop-link");
 let profile = document.querySelector(".profile");
 let imgBtn = document.querySelector(".img-btn");
-
 let mainDate = document.querySelector("#main-date");
 let secondDate = document.querySelector("#second-date");
-
-window.onload = function () {
-  var chart = new CanvasJS.Chart("chartContainer", {
-    animationEnabled: true,
-    theme: "light2", // "light1", "light2", "dark1", "dark2"
-    title: {
-      text: "Trenutno Stanje Knjiga",
-    },
-    axisY: {
-      suffix: "%",
-    },
-
-    data: [
-      {
-        type: "column",
-        yValueFormatString: '#,##0.0#"%"',
-        dataPoints: [
-          { label: "Izdate", y: 71 },
-          { label: "Vracene", y: 67 },
-          { label: "Prekoracenju", y: 50 },
-          { label: "Aktivne", y: 56 },
-          { label: "Arhivirane", y: 30 },
-        ],
-      },
-    ],
-  });
-  chart.render();
-};
 
 function toggleCheck(source) {
   let tableHead = document.querySelector("#table-head");
@@ -114,13 +85,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// // Remove Create Dropdown by clicking outside btn for Mobile
-// window.addEventListener("touchend", (e) => {
-//   if (e.target !== dropLink) {
-//     dropdown.classList.remove("open");
-//   }
-// });
-
 // Remove Profile Dropdown by clicking outside btn
 window.addEventListener("click", (e) => {
   if (e.target !== imgBtn) {
@@ -157,61 +121,3 @@ function deleteRow(r) {
     document.getElementById("searchTable").deleteRow(i);
   }
 }
-
-window.onload = function () {
-  var chart = new CanvasJS.Chart("chartContainer", {
-    animationEnabled: true,
-    theme: "light2", // "light1", "light2", "dark1", "dark2"
-    title: {
-      text: "Trenutno Stanje Knjiga",
-    },
-    axisY: {
-      suffix: "%",
-    },
-
-    data: [
-      {
-        type: "column",
-        yValueFormatString: '#,##0.0#"%"',
-        dataPoints: [
-          { label: "Izdate", y: 71 },
-          { label: "Vracene", y: 67 },
-          { label: "Prekoracenju", y: 50 },
-          { label: "Aktivne", y: 56 },
-          { label: "Arhivirane", y: 30 },
-        ],
-      },
-    ],
-  });
-  chart.render();
-};
-
-mainDate.addEventListener("input", () => {
-  console.log(mainDate.value);
-  let fixedDate = new Date(mainDate.value);
-  fixedDate.setDate(fixedDate.getDate() + 30);
-  secondDate.value = fixedDate.toISOString("yyyy-MM-dd").split("T")[0];
-});
-
-// // Remove Profile Dropdown by clicking outside btn for Mobile
-// window.addEventListener("touchend", (e) => {
-//   if (e.target !== dropLink) {
-//     profile.classList.remove("open");
-//   }
-// });
-
-// MODAL AND OVERLAY PART
-
-// By clicking on resetpsw btn open the modal
-// resetPsw.addEventListener("click", function () {
-//   modal.classList.add("open");
-//   overlay.classList.add("open");
-// });
-
-// closeModalBtn.addEventListener("click", closeModal);
-// overlay.addEventListener("click", closeModal);
-
-// function closeModal() {
-//   modal.classList.remove("open");
-//   overlay.classList.remove("open");
-// }

@@ -16,10 +16,30 @@
     />
 
     <!-- Javascript -->
-    <script src="tabs.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/tabs.js" defer></script>
+    <script src="js/modal.js" defer></script>
   </head>
   <body>
+    <div id="overlay"></div>
+    <div id="modal">
+      <div class="form-container-edit">
+        <div class="column">
+          <a href="#"><i class="bx bx-receipt"></i> Pogledaj detalje</a>
+        </div>
+        <div class="column">
+          <a href="#"><i class="bx bx-list-check"></i>Izdaj knjigu</a>
+        </div>
+        <div class="column">
+          <a href="#"
+            ><i class="bx bx-message-square-minus"></i>Otpisi knjigu</a
+          >
+        </div>
+        <div class="form-btn modal-btn">
+          <button id="close-modal" class="form-btn-secondary">Ponisti</button>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <!-- Sidebar Starts Here-->
       <nav class="sidebar close">
@@ -642,6 +662,7 @@
                       <th>Istice</th>
                       <th>Podnosilac</th>
                       <th>status</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -661,6 +682,7 @@
                       <td class="status">
                         <i class="bx bx-check"></i><i class="bx bx-x"></i>
                       </td>
+                      <td></td>
                     </tr>
                     <tr>
                       <td>
@@ -678,6 +700,7 @@
                       <td class="status">
                         <i class="bx bx-check"></i><i class="bx bx-x"></i>
                       </td>
+                      <td></td>
                     </tr>
                     <tr>
                       <td>
@@ -695,6 +718,7 @@
                       <td class="status">
                         <i class="bx bx-check"></i><i class="bx bx-x"></i>
                       </td>
+                      <td></td>
                     </tr>
                     <tr>
                       <td>
@@ -712,6 +736,7 @@
                       <td class="status">
                         <i class="bx bx-check"></i><i class="bx bx-x"></i>
                       </td>
+                      <td></td>
                     </tr>
                     <tr>
                       <td>
@@ -727,6 +752,12 @@
                       <td>10.05.2022</td>
                       <td>Mijo Mijovic</td>
                       <td class="reserved">Rezervisano</td>
+                      <td>
+                        <i
+                          class="bx bx-dots-vertical-rounded"
+                          id="bx-edit-book"
+                        ></i>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -742,6 +773,12 @@
                       <td>25.06.2022</td>
                       <td>Pero Perovic</td>
                       <td class="reserved">Rezervisano</td>
+                      <td>
+                        <i
+                          class="bx bx-dots-vertical-rounded"
+                          id="bx-edit-book"
+                        ></i>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
