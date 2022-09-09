@@ -1,3 +1,5 @@
+// Script for changing the tabs
+
 function openTabs(evt, tabName) {
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("form-main");

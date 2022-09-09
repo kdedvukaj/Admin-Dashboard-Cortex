@@ -8,9 +8,8 @@ let dropdownBtn = document.querySelector(".dropdown-btn");
 let dropLink = document.querySelector(".drop-link");
 let profile = document.querySelector(".profile");
 let imgBtn = document.querySelector(".img-btn");
-let mainDate = document.querySelector("#main-date");
-let secondDate = document.querySelector("#second-date");
 
+//Script for selecting all the checkboxes
 function toggleCheck(source) {
   let tableHead = document.querySelector("#table-head");
   let deleteTable = document.querySelector("#delete-table");
@@ -22,6 +21,7 @@ function toggleCheck(source) {
   tableHead.classList.toggle("hide");
 }
 
+//Script for removing all the checkboxes
 function toggleCheckRemove(source) {
   let tableHead = document.querySelector("#table-head");
   let deleteTable = document.querySelector("#delete-table");
@@ -35,6 +35,7 @@ function toggleCheckRemove(source) {
   tableHead.classList.remove("hide");
 }
 
+//Script for show/hide btn
 function toggleCheckBtn(source) {
   let btnPrimary = document.querySelector(".btn-group .btn-primary");
   if (source.checked) {
@@ -44,6 +45,7 @@ function toggleCheckBtn(source) {
   }
 }
 
+//Script for show/hide main checkbox
 function toggleCheckHide(source) {
   let editTable = document.querySelector("#edit-table");
   let tableHead = document.querySelector("#table-head");
@@ -114,6 +116,7 @@ function tableSearch() {
   }
 }
 
+//Script for deleting rows
 function deleteRow(r) {
   let text = "Do you really want to delete?";
   if (confirm(text) == true) {

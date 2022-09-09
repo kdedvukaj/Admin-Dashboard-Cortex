@@ -38,12 +38,10 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--body-clr);
-  /* transition: var(--tran-05); */
 }
 
 img {
   width: 100%;
-  /* max-width: 100%; */
 }
 
 a {
@@ -83,6 +81,8 @@ ul {
   margin: 0 0 -3rem 0;
   background: transparent;
 }
+
+/* ====== Button Style Css ====== */
 
 .btn-primary,
 .btn-secondary,
@@ -456,6 +456,110 @@ ul {
   color: var(--primary-clr);
 }
 
+/* ====== Home Info Boxes Style Css ====== */
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.info-box span {
+  font-size: 1.3rem;
+}
+
+.info-box p {
+  font-size: 1.4rem;
+}
+
+.info-box a {
+  color: var(--primary-clr);
+}
+
+.info-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--text-clr);
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+}
+.box-one,
+.box-two,
+.box-three {
+  margin-bottom: 3rem;
+}
+
+.box-two h2,
+.box-two h2 {
+  padding-bottom: 1.5rem;
+}
+
+.box-three {
+  position: relative;
+}
+
+.status.flex-center i {
+  margin: 0;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chartContainer {
+  height: 200px;
+  width: auto;
+}
+
+.info-group .btn-secondary {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* ====== Tabs ====== */
+
+.hide {
+  transform: scale(0);
+  display: none;
+}
+
+.tabs {
+  padding: 2rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.tabs button,
+.scroll-tabs button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--sidebar-clr);
+  margin-right: 0.8rem;
+  padding-bottom: 0.5rem;
+  min-width: max-content;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tabs button.active,
+.scroll-tabs button.active {
+  color: var(--primary-clr);
+  border-bottom: 1px solid var(--primary-clr);
+}
+
+.full-width {
+  width: 100%;
+  border: 1px dotted;
+}
+
 /* ====== Table Style ====== */
 
 .table {
@@ -585,6 +689,8 @@ td.delete i {
   color: var(--red-clr);
 }
 
+/* ====== Input Styles Css ====== */
+
 .search {
   display: flex;
   align-items: center;
@@ -650,6 +756,8 @@ input[type="date"] {
   color: var(--primary-clr);
   cursor: pointer;
 }
+
+/* ====== Table Pagination Style ====== */
 
 .table-pagination {
   display: flex;
@@ -740,44 +848,6 @@ input:focus {
   max-width: 50ch;
 }
 
-/* ====== Tabs ====== */
-.hide {
-  transform: scale(0);
-  display: none;
-}
-
-.tabs {
-  padding: 2rem 0 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.tabs button,
-.scroll-tabs button {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--sidebar-clr);
-  margin-right: 0.8rem;
-  padding-bottom: 0.5rem;
-  min-width: max-content;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.tabs button.active,
-.scroll-tabs button.active {
-  color: var(--primary-clr);
-  border-bottom: 1px solid var(--primary-clr);
-}
-
-.full-width {
-  width: 100%;
-  border: 1px dotted;
-}
-
 /* ====== Profile Page ====== */
 
 .profile-main {
@@ -831,7 +901,7 @@ input:focus {
   scrollbar-width: none;
 }
 
-/* ====== Reset Password Overlay ====== */
+/* ====== Modals and Overlay Css====== */
 
 #overlay {
   position: fixed;
@@ -919,7 +989,7 @@ input:focus {
   text-align: center;
 }
 
-/* ====== Settings - Policy ====== */
+/* ====== Settings - Policy Css Styles S====== */
 
 .policy-column {
   display: flex;
@@ -945,72 +1015,8 @@ input:focus {
 .policy-column input {
   margin-right: 1rem;
 }
-/* ====== Media Queries for Ipad and Up ====== */
 
-.info-box {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0 1.5rem 0;
-}
-
-.info-box span {
-  font-size: 1.3rem;
-}
-
-.info-box p {
-  font-size: 1.4rem;
-}
-
-.info-box a {
-  color: var(--primary-clr);
-}
-
-.info-img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--text-clr);
-  margin-right: 2rem;
-  margin-bottom: 0.5rem;
-}
-.box-one,
-.box-two,
-.box-three {
-  margin-bottom: 3rem;
-}
-
-.box-two h2,
-.box-two h2 {
-  padding-bottom: 1.5rem;
-}
-
-.box-three {
-  position: relative;
-}
-
-.status.flex-center i {
-  margin: 0;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#chartContainer {
-  height: 200px;
-  width: auto;
-}
-
-.info-group .btn-secondary {
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-}
-
-/* ====== Book Css  ====== */
+/* ====== Book Style Css  ====== */
 
 .profile-right p {
   max-width: 45ch;
@@ -1181,6 +1187,8 @@ input:focus {
   }
 }
 
+/* ====== Media Queries for Laptops and Up ====== */
+
 @media screen and (min-width: 992px) {
   .info-group .btn-secondary {
     width: 68rem;
@@ -1202,6 +1210,8 @@ input:focus {
     max-width: 45ch;
   }
 }
+
+/* ====== Media Queries for Big Screens ====== */
 
 @media screen and (min-width: 1250px) {
   .box-group {

@@ -1,3 +1,5 @@
+//Script for modal and overlay activation
+
 let modal = document.querySelector("#modal");
 let overlay = document.querySelector("#overlay");
 let resetPsw = document.querySelector("#reset-psw");
