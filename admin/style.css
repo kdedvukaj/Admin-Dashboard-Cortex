@@ -513,6 +513,11 @@ ul {
 #chartContainer {
   height: 200px;
   width: auto;
+  position: relative;
+}
+
+#myChart {
+  height: 10rem;
 }
 
 .info-group .btn-secondary {
@@ -1208,6 +1213,10 @@ input:focus {
 
   .about-p {
     max-width: 45ch;
+  }
+
+  #myChart {
+    height: 13rem;
   }
 }
 

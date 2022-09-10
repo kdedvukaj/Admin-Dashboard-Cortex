@@ -12,6 +12,12 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!--ChartJs CDN-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"
+      integrity="sha256-+8RZJua0aEWg+QVVKg4LEzEEm/8RFez5Tb4JBNiV5xA="
+      crossorigin="anonymous"
+    ></script>
     <!-- Javascript -->
     <script src="js/script.js" defer></script>
     <script src="js/chart.js" defer></script>
@@ -325,8 +331,9 @@
           </div>
           <div class="box-three">
             <h2>STATISTIKA</h2>
-            <div id="chartContainer"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <div id="chartContainer">
+              <canvas id="myChart"></canvas>
+            </div>
           </div>
         </div>
         <div class="spacer"></div>
